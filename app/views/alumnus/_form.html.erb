@@ -1,0 +1,32 @@
+<%= form_with(model: alumnu, local: true) do |form| %>
+  <% if alumnu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alumnu.errors.count, "error") %> prohibited this alumnu from being saved:</h2>
+
+      <ul>
+      <% alumnu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nama %>
+    <%= form.text_field :nama, id: :alumnu_nama %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kelas %>
+    <%= form.text_field :kelas, id: :alumnu_kelas %>
+  </div>
+
+  <div class="field" %>
+    <%= form.label :foto %>
+    <%= form.file_field :foto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

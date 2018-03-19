@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @alumnu.nama %>
+</p>
+
+<p>
+  <strong>Kelas:</strong>
+  <%= @alumnu.kelas %>
+</p>
+
+<p>
+  <strong>ProfilePhoto:</strong>
+  <%= image_tag(@alumnu.photo.foto.thumb.url) %>
+</p>
+
+<%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |
+<%= link_to 'Back', alumnus_path %>
