@@ -12,7 +12,14 @@
 
 <% @photos.each do |p| %>
   <%= image_tag(p.foto.thumb.url) %>
+<% end %> <br>
+
+<% @participants.each do |p| %>
+  <p><%= p.name %></p>
+  <p><%= p.email %></p>
 <% end %>
+
+<%= link_to 'Add Participant', new_event_participants_path(@event) %> <br>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

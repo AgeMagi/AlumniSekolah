@@ -21,6 +21,11 @@
     <%= form.text_area :narasi, id: :event_narasi %>
   </div>
 
+  <div class="field">
+    <%= form.label(:dilaksanakan, "Tanggal dilaksanakan : ") %>
+    <%= form.date_field :dilaksanakan %>
+  </div>
+
   <%= form.fields_for :photos do |p| %>
     <div class="field">
       <%= p.label :foto %> <br>
