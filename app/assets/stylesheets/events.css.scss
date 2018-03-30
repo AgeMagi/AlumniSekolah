@@ -3,5 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-    font-size: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #005f9e;
+}
+
+.event-span h1 {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+#event-main {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#event-list {
+    text-align: left;
+    max-width: 40vw;
+    word-wrap: break-word;
+    height: 100%;
+    margin: 10px;
+    margin-top: 0px;
+}
+
+.event-part {
+    margin-bottom: 20px;
+}
+
+#event-calendar {
+    text-align: left;
+    max-width: 20vw;
+    height: 100%;
+    margin: 10px;
+    margin-top: 0px;
 }

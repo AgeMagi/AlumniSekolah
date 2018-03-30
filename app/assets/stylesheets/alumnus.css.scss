@@ -9,12 +9,13 @@ h1 {
 h2 {
     font-weight: 400;
     font-size: 1.5em;
-    color: #757475;
+    color: #3f3f3f;
 }
 
 #alumni-main {
-    text-align: center;
-    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #alumni-filter, #alumni-list, .alumni-span {
@@ -26,18 +27,16 @@ h2 {
 #alumni-filter {
     text-align: left;
     top: 0;
-    margin: auto;
     margin-right: 5px;
-    display: inline-block;
+    height: 100%;
 }
 
 #alumni-list {
     text-align: left;
-    margin: auto;
     margin-left: 5px;
     max-width: 40vw;
     word-wrap: break-word;
-    display: inline-block;
+    height: 100%;
 }
 
 .alumni-span {
