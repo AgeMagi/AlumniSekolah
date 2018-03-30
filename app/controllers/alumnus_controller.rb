@@ -65,6 +65,10 @@ class AlumnusController < ApplicationController
     end
   end
 
+  def search
+    @alumnus = Alumnu.where("kelas1 LIKE ? AND kelas2 LIKE ? AND kelas3 LIKE ?", "%#{params[:kelas1]}%", "%#{params[:kelas2]}%", "%#{params[:kelas3]}%")
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_alumnu
@@ -73,6 +77,6 @@ class AlumnusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnu_params
-      params.require(:alumnu).permit(:nama, :kelas)
+      params.require(:alumnu).permit(:nama, :kelas1, :kelas2, :kelas3)
     end
 end

@@ -1,0 +1,119 @@
+<p id="notice"><%= notice %></p>
+
+<!--
+<table>
+<thead>
+    <tr>
+    <th>Nama</th>
+    <th>Kelas</th>
+    <th colspan="3"></th>
+    </tr>
+</thead>
+
+<tbody>
+    <% @alumnus.each do |alumnu| %>
+    <tr>
+        <td><%= alumnu.nama %></td>
+        <td><%= alumnu.kelas1 %></td>
+        <td><%= alumnu.kelas2 %></td>
+        <td><%= alumnu.kelas3 %></td>
+        <td><%= link_to 'Show', alumnu %></td>
+        <td><%= link_to 'Edit', edit_alumnu_path(alumnu) %></td>
+        <td><%= link_to 'Destroy', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</tbody>
+</table>
+-->
+
+<div id='alumni-main'>
+  <div id='alumni-filter'>
+    <h2>Filter</h2>
+    <hr>
+    <div>
+      <p>Kelas 1</p>
+      <p>Kelas 2</p>
+      <p>Kelas 3</p>
+    </div>
+
+    <div>
+      <%= form_tag search_alumnus_path, method: :get do %>
+        <%= select_tag(:kelas1, options_for_select(
+            [
+                ['1A', '1A'],
+                ['1B', '1B'],
+                ['1C', '1C'],
+                ['1D', '1D'],
+                ['1E', '1E'],
+                ['1F', '1F'],
+                ['1G', '1G'],
+                ['1H', '1H'],
+                ['1I', '1I'],
+                ['1J', '1J'],
+                ['1K', '1K'],
+                ['', '']
+            ]
+        )) %>
+        <%= select_tag(:kelas2, options_for_select(
+            [
+                ['2A', '2A'],
+                ['2B', '2B'],
+                ['2C', '2C'],
+                ['2D', '2D'],
+                ['2E', '2E'],
+                ['2F', '2F'],
+                ['2G', '2G'],
+                ['2H', '2H'],
+                ['2I', '2I'],
+                ['2J', '2J'],
+                ['2K', '2K'],
+                ['', '']
+            ]
+        )) %>
+        <%= select_tag(:kelas3, options_for_select(
+            [
+                ['3A', '3A'],
+                ['3B', '3B'],
+                ['3C', '3C'],
+                ['3D', '3D'],
+                ['3E', '3E'],
+                ['3F', '3F'],
+                ['3G', '3G'],
+                ['3H', '3H'],
+                ['3I', '3I'],
+                ['3J', '3J'],
+                ['3K', '3K'],
+                ['', '']
+            ]
+        )) %> <br>
+        <%= button_tag(type: :submit, class: "button-default") do %>
+          Search
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id='alumni-list'>
+    <% @alumnus.each do |alumnu| %>
+      <div class='alumni-span'>
+        <div class='alumni-photo'>
+          <%= image_tag(alumnu.photo.foto.thumb.url) %>
+        </div>
+        <div class='alumni-data'>
+          <h1><%= alumnu.nama %></h1>
+          <h2 style="display: inline; font-weight: 400">Kelas:&nbsp;</h2>
+          <h2 style="display: inline;"><%= alumnu.kelas1 %></h2>
+          <h2 style="display: inline;"><%= alumnu.kelas2 %></h2>
+          <h2 style="display: inline;"><%= alumnu.kelas3 %></h2>
+          <div class='alumni-controller'>
+            <p><%= link_to 'Show', alumnu %></p>
+            <p><%= link_to 'Edit', edit_alumnu_path(alumnu) %></p>
+            <p><%= link_to 'Destroy', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'New Alumnu', new_alumnu_path %>
+</div>

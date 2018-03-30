@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resource :participants
   resources :alumnus
   resources :photos
+
+  get 'search_events', to: 'events#search'
+  get 'search_alumnus', to: 'alumnus#search'
 end
