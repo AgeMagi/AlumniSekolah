@@ -66,6 +66,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def search
+    @events = Event.where("title LIKE ?", "%#{params[:search_events]}%")
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event

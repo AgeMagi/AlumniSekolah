@@ -15,12 +15,17 @@
         <div>
             <img src='D:\Project\AlumniSekolah\img\logo.png'>
         </div>
-        <div id="search-jumbo">
-            <input type="text" placeholder="Search..">
-            <button type="button">Search</button>
-        </div>
+        <%= form_tag search_event_path, method: :get do %>
+          <div class="form-group row" >
+            <%= text_field_tag :search_events %>
+            <%= button_tag(type: :submit) do %>
+              Search
+            <% end %>
+          </div>
+        <% end %>
     </div>
     <%= render 'layouts/navigation' %>
+
     <%= yield %>
 </body>
 </html>
