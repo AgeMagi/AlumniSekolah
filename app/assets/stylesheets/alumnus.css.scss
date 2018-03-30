@@ -3,6 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-  font-family: "Segoe UI";
-  font-size: 2em;
+    font-size: 2em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #757475;
+}
+
+#alumni-main {
+    display: flex;
+}
+
+#alumni-filter, #alumni-list, #alumni-sort {
+    background-color: white;
+    border: 1px solid #E1E1E1;
+    padding: 20px;
+}
+
+#alumni-filter {
+    margin: 0 auto;
+    margin-right: 5px;
+    display: block;
+}
+
+#alumni-sort {
+    margin-bottom: 1vh;
+}
+
+#alumni-list {
+    margin: 0 auto;
+    margin-left: 5px;
+}
+
+.option {
+    align-items: center;
+    //display: inline;
 }

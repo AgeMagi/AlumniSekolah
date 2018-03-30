@@ -1,10 +1,32 @@
 @import "bootstrap";
 
+body {
+    font-family: "Barlow";
+    background-color: #F8F7F8;
+}
+
 #logo {
-  float: left;
-  font-size: 1.7em;
-  color: darkblue;
-  text-transfom: uppercase;
-  letter-spacin: -1px;
-  font-weight: bold;
+    float: left;
+    font-size: 1.7em;
+    color: darkblue;
+    text-transfom: uppercase;
+    letter-spacin: -1px;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: white;
+    width: 4vh;
+    display: inline-flex;
+}
+
+.jumbotron #search-jumbo {
+    display: flex;
+    margin: 1vw;
+}
+
+.navbar-collapse {
+    background-color: #00A7E5;
+    color: white;
+    text-align: center;
 }

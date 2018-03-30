@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>AlumniSekolah</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:400,600">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag params[:controller] %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <div class="jumbotron">
+        <div>
+            <img src='D:\Project\AlumniSekolah\img\logo.png'>
+        </div>
+        <div id="search-jumbo">
+            <input type="text" placeholder="Search..">
+            <button type="button">Search</button>
+        </div>
+    </div>
     <%= render 'layouts/navigation' %>
     <%= yield %>
-  </body>
+</body>
 </html>
