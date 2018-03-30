@@ -13,31 +13,54 @@ h2 {
 }
 
 #alumni-main {
-    display: flex;
+    text-align: center;
+    height: auto;
 }
 
-#alumni-filter, #alumni-list, #alumni-sort {
+#alumni-filter, #alumni-list, .alumni-span {
     background-color: white;
     border: 1px solid #E1E1E1;
     padding: 20px;
 }
 
 #alumni-filter {
-    margin: 0 auto;
+    text-align: left;
+    top: 0;
+    margin: auto;
     margin-right: 5px;
-    display: block;
-}
-
-#alumni-sort {
-    margin-bottom: 1vh;
+    display: inline-block;
 }
 
 #alumni-list {
-    margin: 0 auto;
+    text-align: left;
+    margin: auto;
     margin-left: 5px;
+    max-width: 40vw;
+    word-wrap: break-word;
+    display: inline-block;
 }
 
-.option {
-    align-items: center;
-    //display: inline;
+.alumni-span {
+    background-color: white;
+    margin-bottom: 2vh;
+    display: flex;
+}
+
+.alumni-span h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #757475;
+}
+
+.alumni-controller {
+    display: flex;
+}
+
+.alumni-photo {
+    margin-right: 1.5vw;
+}
+
+.alumni-photo img {
+   // width: 100px;
+    //height: auto;
 }
