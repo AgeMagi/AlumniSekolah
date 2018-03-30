@@ -73,6 +73,6 @@ class AlumnusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnu_params
-      params.require(:alumnu).permit(:nama, :kelas)
+      params.require(:alumnu).permit(:nama, :kelas1, :kelas2, :kelas3)
     end
 end

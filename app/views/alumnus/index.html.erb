@@ -5,7 +5,7 @@
 <thead>
     <tr>
     <th>Nama</th>
-    <th>Kelas</th>
+    <th>Kelas1</th>
     <th colspan="3"></th>
     </tr>
 </thead>
@@ -14,7 +14,9 @@
     <% @alumnus.each do |alumnu| %>
     <tr>
         <td><%= alumnu.nama %></td>
-        <td><%= alumnu.kelas %></td>
+        <td><%= alumnu.kelas1 %></td>
+        <td><%= alumnu.kelas2 %></td>
+        <td><%= alumnu.kelas3 %></td>
         <td><%= link_to 'Show', alumnu %></td>
         <td><%= link_to 'Edit', edit_alumnu_path(alumnu) %></td>
         <td><%= link_to 'Destroy', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
