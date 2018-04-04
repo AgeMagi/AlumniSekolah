@@ -1,25 +1,39 @@
+<div class='event-main'>
+  <div class='box-default event-list'>
+    <div class='event-span'>
+      <h1><%= @event.title %></h1>
+      <p><%= @event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+      <% @photos.each do |p| %>
+        <%= image_tag(p.foto.thumb.url) %>
+      <% end %> <br>
+      <p><%= @event.narasi %></p>
+    </div>
+  </div>
+
+  <div class='box-default' id='event-next'>
+    <h1>Event Lainnya</h1>
+    <hr>
+    <%@events.each do |event| %>
+      <div class='side-event'>
+        <% if (event.id != (params[:id]).to_i) %>
+          <h1><%= link_to event.title, event_path(event) %> </h1>
+          <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+          <hr>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'Add Participant', new_event_participants_path(@event) %> <br>
+
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+
+  <% @participants.each do |p| %>
+    <p><%= p.name %></p>
+    <p><%= p.email %></p>
+  <% end %>
+  
+</div>
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Narasi:</strong>
-  <%= @event.narasi %>
-</p>
-
-<% @photos.each do |p| %>
-  <%= image_tag(p.foto.thumb.url) %>
-<% end %> <br>
-
-<% @participants.each do |p| %>
-  <p><%= p.name %></p>
-  <p><%= p.email %></p>
-<% end %>
-
-<%= link_to 'Add Participant', new_event_participants_path(@event) %> <br>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>

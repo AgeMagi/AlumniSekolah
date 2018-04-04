@@ -63,3 +63,28 @@ h2 {
    // width: 100px;
     //height: auto;
 }
+
+.edit {
+    display: flex;
+}
+
+.edit-left {
+    width: 35%;
+    text-align: right;
+    margin: 5px;
+    margin-right: 5px;
+}
+
+.edit-right {
+    width: 65%;
+    margin: 5px;
+}
+
+.edit-right input {
+    width: 80%;
+}
+
+.edit-right textarea {
+    width: 80%;
+    height: 100px;
+}

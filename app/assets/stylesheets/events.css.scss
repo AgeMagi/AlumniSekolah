@@ -14,16 +14,17 @@ h1 {
     color: #3f3f3f;
 }
 
-#event-main {
+.event-main {
     width: 100%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-#event-list {
+.event-list {
     text-align: left;
-    max-width: 40vw;
+    width: 40vw;
     word-wrap: break-word;
     height: 100%;
     margin: 10px;
@@ -34,10 +35,60 @@ h1 {
     margin-bottom: 20px;
 }
 
+#event-next, #event-calendar {
+    text-align: left;
+    max-width: 20vw;
+    height: 100%;
+    margin: 10px;
+    margin-top: 0px;
+}
+
 #event-calendar {
     text-align: left;
     max-width: 20vw;
     height: 100%;
     margin: 10px;
     margin-top: 0px;
+}
+
+/* Event Edit */
+
+.edit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.edit-left {
+    width: 35%;
+    text-align: right;
+    margin: 5px;
+    margin-right: 5px;
+}
+
+.edit-right {
+    width: 65%;
+    margin: 5px;
+}
+
+.edit input {
+    width: 100%;
+}
+
+.edit textarea {
+    width: 100%;
+    min-height: 50em;
+}
+
+.side-event {
+
+}
+
+.side-event h1 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.side-event p {
+    font-size: 0.75em;
 }

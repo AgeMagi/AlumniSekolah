@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   def show
     @photos = @event.photos.all
     @participants = @event.participants.all
+    @events = Event.all
   end
 
   # GET /events/new
