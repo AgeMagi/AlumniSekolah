@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :events do
-    resource :participants
+    resources :participants
   end
-  resource :participants
+  resources :participants
   resources :alumnus
   resources :photos
   resources :users, except: :new
