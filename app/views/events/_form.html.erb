@@ -11,29 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :event_title %>
-  </div>
+  <div class='event-main'>
+    <div class='event-list box-default'>
+      <h1>Edit Event</h1>
 
-  <div class="field">
-    <%= form.label :narasi %>
-    <%= form.text_area :narasi, id: :event_narasi %>
-  </div>
+      <div class='edit'>
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :event_title %>
+      </div>
 
-  <div class="field">
-    <%= form.label(:dilaksanakan, "Tanggal dilaksanakan : ") %>
-    <%= form.date_field :dilaksanakan %>
-  </div>
+      <%= form.fields_for :photos do |p| %>
+        <div class="edit">
+          <%= p.label :foto %>
+          <%= p.file_field :foto, :multiple => true, name: "photos[foto][]" %>
+        </div>
+      <% end %>
 
-  <%= form.fields_for :photos do |p| %>
-    <div class="field">
-      <%= p.label :foto %> <br>
-      <%= p.file_field :foto, :multiple => true, name: "photos[foto][]" %>
+      <div class="edit">
+        <%= form.label(:dilaksanakan, "Tanggal : ") %>
+        <%= form.date_field :dilaksanakan %>
+      </div>
+
+      <div class="edit">
+        <%= form.label :narasi %>
+        <%= form.text_area :narasi, id: :event_narasi %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
+      <%= link_to 'Show', @event %> |
+      <%= link_to 'Back', events_path %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>

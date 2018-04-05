@@ -3,41 +3,92 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #005f9e;
+  font-size: 2em;
+  font-weight: bold;
+  color: #005f9e;
 }
 
 .event-span h1 {
-    font-size: 1.7em;
-    font-weight: bold;
-    color: #3f3f3f;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #3f3f3f;
 }
 
-#event-main {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+.event-main {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-#event-list {
-    text-align: left;
-    max-width: 40vw;
-    word-wrap: break-word;
-    height: 100%;
-    margin: 10px;
-    margin-top: 0px;
+.event-list {
+  text-align: left;
+  width: 40vw;
+  word-wrap: break-word;
+  height: 100%;
+  margin: 10px;
+  margin-top: 0px;
 }
 
 .event-part {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#event-next, #event-calendar {
+  text-align: left;
+  max-width: 20vw;
+  height: 100%;
+  margin: 10px;
+  margin-top: 0px;
 }
 
 #event-calendar {
-    text-align: left;
-    max-width: 20vw;
-    height: 100%;
-    margin: 10px;
-    margin-top: 0px;
+  text-align: left;
+  max-width: 20vw;
+  height: 100%;
+  margin: 10px;
+  margin-top: 0px;
+}
+
+/* Event Edit */
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.edit-left {
+  width: 35%;
+  text-align: right;
+  margin: 5px;
+  margin-right: 5px;
+}
+
+.edit-right {
+  width: 65%;
+  margin: 5px;
+}
+
+.edit input {
+  width: 100%;
+}
+
+.edit textarea {
+  width: 100%;
+  min-height: 50em;
+}
+
+.side-event {
+
+}
+
+.side-event h1 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.side-event p {
+  font-size: 0.75em;
 }
