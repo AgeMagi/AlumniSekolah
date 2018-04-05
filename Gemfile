@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rack-timeout'
+
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 
