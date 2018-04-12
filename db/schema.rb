@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404095249) do
+ActiveRecord::Schema.define(version: 20180412030912) do
+
+  create_table "administrators", force: :cascade do |t|
+    t.string "ketua1"
+    t.string "fotoketua1"
+    t.string "ketua2"
+    t.string "fotoketua2"
+    t.string "bendahara1"
+    t.string "fotobenahara1"
+    t.string "bendahara2"
+    t.string "fotobendahara2"
+    t.string "pembina"
+    t.string "fotopembina"
+    t.string "penasihat"
+    t.string "fotopenasihat"
+  end
 
   create_table "alumnus", force: :cascade do |t|
     t.string "nama"
