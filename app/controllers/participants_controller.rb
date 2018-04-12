@@ -64,7 +64,6 @@ class ParticipantsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_participant
-      debugger
       @participant = Participant.find(params[:participant_id])
     end
 

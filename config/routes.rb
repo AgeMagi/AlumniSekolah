@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :alumnus
   resources :photos
   resources :users, except: :new
+  resources :administrators
 
   get 'search_events', to: 'events#search'
   get 'search_alumnus', to: 'alumnus#search'
