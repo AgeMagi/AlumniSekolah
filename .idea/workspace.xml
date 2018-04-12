@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6957dd13-f2e8-49ad-808d-fcae30e7939c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/rack_timeout.rb" afterPath="$PROJECT_DIR$/config/initializers/rack_timeout.rb" />
-    </list>
+    <list default="true" id="6957dd13-f2e8-49ad-808d-fcae30e7939c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -424,12 +421,12 @@
       <workItem from="1523010530706" duration="1663000" />
       <workItem from="1523031846373" duration="913000" />
       <workItem from="1523502375309" duration="6144000" />
-      <workItem from="1523526846598" duration="550000" />
+      <workItem from="1523526846598" duration="773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53206000" />
+    <option name="totallyTimeSpent" value="53429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="536" y="120" width="798" height="510" extended-state="0" />
