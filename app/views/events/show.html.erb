@@ -5,9 +5,19 @@
       <p><%= @event.dilaksanakan.strftime("%m/%d/%Y") %></p>
       <% @photos.each do |p| %>
         <%= image_tag(p.foto.thumb.url) %>
-      <% end %> <br>
+      <% end %> <br> <br>
       <p><%= @event.narasi %></p>
     </div>
+
+    <%= link_to 'Add Participant', new_event_participants_path(@event) %> <br>
+
+    <%= link_to 'Edit', edit_event_path(@event) %> |
+    <%= link_to 'Back', events_path %>
+
+    <% @participants.each do |p| %>
+      <p><%= p.name %></p>
+      <p><%= p.email %></p>
+    <% end %>
   </div>
 
   <div class='box-default' id='event-next'>
@@ -18,21 +28,14 @@
         <% if (event.id != (params[:id]).to_i) %>
           <h1><%= link_to event.title, event_path(event) %> </h1>
           <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+          <% @photos.each do |p| %>
+            <%= image_tag(p.foto.thumb.url) %>
+          <% end %>
           <hr>
         <% end %>
       </div>
     <% end %>
   </div>
-
-  <%= link_to 'Add Participant', new_event_participants_path(@event) %> <br>
-
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-  <%= link_to 'Back', events_path %>
-
-  <% @participants.each do |p| %>
-    <p><%= p.name %></p>
-    <p><%= p.email %></p>
-  <% end %>
   
 </div>
 

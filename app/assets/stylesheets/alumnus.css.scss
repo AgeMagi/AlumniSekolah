@@ -12,10 +12,11 @@ h2 {
     color: #3f3f3f;
 }
 
-#alumni-main {
+.alumni-main {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #alumni-filter, #alumni-list, .alumni-span {
