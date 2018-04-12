@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330122925) do
+ActiveRecord::Schema.define(version: 20180412030912) do
+
+  create_table "administrators", force: :cascade do |t|
+    t.string "ketua1"
+    t.string "fotoketua1"
+    t.string "ketua2"
+    t.string "fotoketua2"
+    t.string "bendahara1"
+    t.string "fotobenahara1"
+    t.string "bendahara2"
+    t.string "fotobendahara2"
+    t.string "pembina"
+    t.string "fotopembina"
+    t.string "penasihat"
+    t.string "fotopenasihat"
+  end
 
   create_table "alumnus", force: :cascade do |t|
     t.string "nama"
@@ -45,6 +60,13 @@ ActiveRecord::Schema.define(version: 20180330122925) do
     t.integer "student_id"
     t.integer "alumnu_id"
     t.integer "event_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.integer "chance"
+    t.string "active"
   end
 
 end

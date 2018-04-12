@@ -4,9 +4,9 @@
       <h2><%= pluralize(alumnu.errors.count, "error") %> prohibited this alumnu from being saved:</h2>
 
       <ul>
-      <% alumnu.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% alumnu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

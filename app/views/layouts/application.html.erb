@@ -14,13 +14,14 @@
     <div class="jumbotron">
         <%= image_tag("logo.png")%>
           <%= form_tag search_events_path, method: :get, id: "search-jumbo" do %>
-            <%= text_field_tag(:search_events) %>
+            <%= text_field_tag(:search_events, nil, placeholder: "Cari Event") %>
             <%= button_tag(type: :submit, class: "button-default") do %>
               Search
             <% end %>
           <% end %>
     </div>
     <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
 
     <div class='container-fluid' id='footer'>

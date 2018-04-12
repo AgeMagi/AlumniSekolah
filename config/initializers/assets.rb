@@ -12,6 +12,10 @@ Rails.application.config.assets.precompile += %w( events.css )
 Rails.application.config.assets.precompile += %w( participants.css )
 Rails.application.config.assets.precompile += %w( photos.css )
 Rails.application.config.assets.precompile += %w( scaffolds.css )
+Rails.application.config.assets.precompile += %w( scaffolds.css )
+Rails.application.config.assets.precompile += %w( scaffolds.css )
+Rails.application.config.assets.precompile += %w( users.css )
+Rails.application.config.assets.precompile += %w( sessions.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
