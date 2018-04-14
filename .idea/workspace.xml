@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6957dd13-f2e8-49ad-808d-fcae30e7939c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/administrators_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/administrators_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/alumnus_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/alumnus_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/models/administrator.rb" afterPath="$PROJECT_DIR$/app/models/administrator.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/alumnus/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/alumnus/_form.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-    </list>
+    <list default="true" id="6957dd13-f2e8-49ad-808d-fcae30e7939c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -459,12 +450,12 @@
       <workItem from="1523672009132" duration="2325000" />
       <workItem from="1523674438285" duration="3489000" />
       <workItem from="1523686603602" duration="797000" />
-      <workItem from="1523687585235" duration="20000" />
+      <workItem from="1523687585235" duration="251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60859000" />
+    <option name="totallyTimeSpent" value="61090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="588" y="220" width="1303" height="780" extended-state="6" />
