@@ -24,16 +24,19 @@
     <h1>Event Lainnya</h1>
     <hr>
     <%@events.each do |event| %>
-    <div class='side-event'>
-        <% if (event.id != (params[:id]).to_i) %>
-        <h1><%= link_to event.title, event_path(event) %> </h1>
-        <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-        <% @photos.each do |p| %>
-            <%= image_tag(p.foto, width: 350, height: 250) %>
-        <% end %>
-        <hr>
-        <% end %>
-    </div>
+        <div class='side-event'>
+            <% if (event.id != (params[:id]).to_i) %>
+                <div class='side-event-photo'>
+                    <% event.photos.each do |p| %>
+                        <%= image_tag(p.foto, width: 350, height: 250) %>
+                    <% end %>
+                </div>
+                <br>
+                <h1><%= link_to event.title, event_path(event) %> </h1>
+                <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+                <hr>
+            <% end %>
+        </div>
     <% end %>
 </div>
 

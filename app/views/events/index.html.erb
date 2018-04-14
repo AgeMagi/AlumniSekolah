@@ -6,9 +6,11 @@
       <% @events.each do |event| %>
         <% if event.dilaksanakan >= Date.today %>
           <div class='box-default event-span'>
-            <% @photos.each do |p| %>
-              <%= image_tag(p.foto) %>
-            <% end %>
+            <div class='event-span-photo'>
+              <% event.photos.each do |p| %>
+                <%= image_tag(p.foto) %>
+              <% end %>
+            </div>
             <h1><%= event.title %></h1>
             <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
             <p><%= truncate event.narasi, length: 300 %></p>

@@ -15,7 +15,7 @@ h1 {
 }
 
 .event-span img {
-    clip-path: rect(0px,60px,200px,0px);
+    width: 100%;
 }
 
 .event-main {
@@ -40,13 +40,12 @@ h1 {
 }
 
 .event-span-photo {
-    //width: 141px;
-    height: 176px;
+    height: 200px;
     overflow: hidden;
 }
 
 .event-span-photo img {
-
+    width: 100%;
 }
 
 #event-next, #event-calendar {
@@ -63,6 +62,16 @@ h1 {
     height: 100%;
     margin: 10px;
     margin-top: 0px;
+}
+
+.side-event-photo {
+    overflow: hidden;
+    height: 15vh;
+}
+
+#event-next img {
+    width: 100%;
+    height: auto;
 }
 
 #event-calendar {
