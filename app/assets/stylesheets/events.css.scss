@@ -1,17 +1,13 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 h1 {
-  font-size: 2em;
-  font-weight: bold;
-  color: #005f9e;
+    font-size: 2em;
+    font-weight: bold;
+    color: #005f9e;
 }
 
 .event-span h1 {
-  font-size: 1.7em;
-  font-weight: bold;
-  color: #3f3f3f;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #3f3f3f;
 }
 
 .event-span img {
@@ -19,24 +15,35 @@ h1 {
 }
 
 .event-main {
-    // width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    //justify-content: center;
     margin-top: 10px;
+}
+
+.event-main .row {
+    text-align: center;
+    margin: auto;
+}
+
+.event-main .col-sm-8 {
+    margin: auto;
+}
+
+.event-main .col-sm-4 {
+    margin: auto;
 }
 
 .event-list {
     text-align: left;
-    width: 40vw;
     word-wrap: break-word;
-    height: 100%;
-    margin: 10px;
     margin-top: 0px;
 }
 
 .event-part {
     margin-bottom: 20px;
+}
+
+.event-part p {
+    font-size: 1em;
 }
 
 .event-span-photo {
@@ -49,18 +56,8 @@ h1 {
 }
 
 #event-next, #event-calendar {
-  text-align: left;
-  max-width: 20vw;
-  height: 100%;
-  margin: 10px;
-  margin-top: 0px;
-}
-
-#event-next, #event-calendar {
     text-align: left;
-    max-width: 20vw;
     height: 100%;
-    margin: 10px;
     margin-top: 0px;
 }
 
@@ -72,14 +69,6 @@ h1 {
 #event-next img {
     width: 100%;
     height: auto;
-}
-
-#event-calendar {
-    text-align: left;
-    max-width: 20vw;
-    height: 100%;
-    margin: 10px;
-    margin-top: 0px;
 }
 
 /* Event Edit */
@@ -108,11 +97,7 @@ h1 {
 
 .edit textarea {
     width: 100%;
-    min-height: 50em;
-}
-
-.side-event {
-
+    min-height: 30em;
 }
 
 .side-event h1 {
@@ -122,4 +107,47 @@ h1 {
 
 .side-event p {
     font-size: 0.75em;
+}
+
+@media screen and (max-width: 998px) {
+    .event-main .row {
+        display: block;
+    }
+
+    .event-main .col-sm-8 {
+        display: block;
+    }
+
+    .event-main .col-sm-4 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0;
+    }
+
+    .event-main .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .event-main .col-sm-8 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .event-main .col-sm-4 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .event-part h1 {
+        font-size: 4em;
+    }
+    
+    .event-span h1 {
+        font-size: 3.4em;
+    }
 }

@@ -1,59 +1,59 @@
-<div class='event-main'>
-  <div class='event-list'>
-    <div class='box-default event-part'>
-      <h1>Upcoming Events</h1>
-      <br>
-      <% @events.each do |event| %>
-        <% if event.dilaksanakan >= Date.today %>
-          <div class='box-default event-span'>
-            <div class='event-span-photo'>
-              <% event.photos.each do |p| %>
-                <%= image_tag(p.foto) %>
+<div class='container event-main'>
+  <div class='row'>
+    <div class='col-sm-8 event-list'>
+      <div class='box-default event-part'>
+        <h1>Upcoming Events</h1>
+        <br>
+        <% @events.each do |event| %>
+          <% if event.dilaksanakan >= Date.today %>
+            <div class='box-default event-span'>
+              <div class='event-span-photo'>
+                <% event.photos.each do |p| %>
+                  <%= image_tag(p.foto) %>
+                <% end %>
+              </div>
+              <h1><%= event.title %></h1>
+              <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+              <p><%= truncate event.narasi, length: 300 %></p>
+              <p><%= link_to 'Read more..', event %></p>
+              <% if logged_in? %>
+                <p><%= link_to 'Edit', edit_event_path(event) %></p>
+                <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
-            <h1><%= event.title %></h1>
-            <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-            <p><%= truncate event.narasi, length: 300 %></p>
-            <p><%= link_to 'Read more..', event %></p>
-            <% if logged_in? %>
-              <p><%= link_to 'Edit', edit_event_path(event) %></p>
-              <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <% end %>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
 
-    <div class='box-default event-part'>
-      <h1>Past Events</h1>
-      <br>
-      <% @events.each do |event| %>
-        <% if event.dilaksanakan < Date.today %>
-          <div class='box-default event-span'>
-            <div class='event-span-photo'>
-              <% event.photos.each do |p| %>
-                <%= image_tag(p.foto) %>
+      <div class='box-default event-part'>
+        <h1>Past Events</h1>
+        <br>
+        <% @events.each do |event| %>
+          <% if event.dilaksanakan < Date.today %>
+            <div class='box-default event-span'>
+              <div class='event-span-photo'>
+                <% event.photos.each do |p| %>
+                  <%= image_tag(p.foto) %>
+                <% end %>
+              </div>
+              <br>
+              <h1><%= event.title %></h1>
+              <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+              <p style="display: inline;"><%= truncate event.narasi, length: 300 %></p>
+              <p><%= link_to 'Read more..', event %></p>
+              <% if logged_in? %>
+                <p><%= link_to 'Edit', edit_event_path(event) %></p>
+                <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
-            <br>
-            <h1><%= event.title %></h1>
-            <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-            <p style="display: inline;"><%= truncate event.narasi, length: 300 %></p>
-            <p><%= link_to 'Read more..', event %></p>
-            <% if logged_in? %>
-              <p><%= link_to 'Edit', edit_event_path(event) %></p>
-              <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <% end %>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-
-  </div>
-
-  <div class='box-default' id='event-calendar'>
-    <h1>Calendar</h1>
-    <hr>
+    <div class='col-sm-4 box-default' id='event-calendar'>
+      <h1>Calendar</h1>
+      <hr>
+    </div>
   </div>
 </div>
 

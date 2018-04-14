@@ -13,10 +13,17 @@ h2 {
 }
 
 .alumni-main {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    //justify-content: center;
     margin-top: 10px;
+}
+
+form {
+    display: block;
+}
+
+form select {
+    display: block;
+    margin-bottom: 18px;
 }
 
 #alumni-filter, #alumni-list, .alumni-span {
@@ -30,6 +37,7 @@ h2 {
     top: 0;
     margin-right: 5px;
     height: 100%;
+    width: 50px;
 }
 
 #alumni-list {
