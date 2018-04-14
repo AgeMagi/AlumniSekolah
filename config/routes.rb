@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '06071998', to: 'users#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   root 'events#index'
 end

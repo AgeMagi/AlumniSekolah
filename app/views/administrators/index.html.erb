@@ -3,13 +3,29 @@
   <%= render :partial => 'administrators/form' %>
 <% else %>
   <% @administrator = Administrator.last %>
-  <% if !@administrator.ketua1.nil? %>
-    <%= image_tag(@administrator.fotoketua1, height: 100, width: 100) %>
+  <% if !(@administrator.ketua1 == "") %>
+    <%= image_tag(@administrator.fotoketua1.thumb.url) %>
     Ketua 1: <%= @administrator.ketua1 %> <br>
   <% end %>
-  <% if !@administrator.ketua2.nil? %>
-    <%= image_tag(@administrator.fotoketua2) %>
-    Ketua 1: <%= @administrator.ketua2 %> <br>
+  <% if !(@administrator.ketua2 == "") %>
+    <%= image_tag(@administrator.fotoketua2.thumb.url) %>
+    Ketua 2: <%= @administrator.ketua2 %> <br>
+  <% end %>
+  <% if !(@administrator.bendahara1 == "") %>
+    <%= image_tag(@administrator.fotobendahara1.thumb.url) %>
+    Bendahara 1: <%= @administrator.bendahara1 %> <br>
+  <% end %>
+  <% if !(@administrator.bendahara2 == "") %>
+    <%= image_tag(@administrator.fotobendahara2.thumb.url) %>
+    Bendahara 2: <%= @administrator.bendahara2 %> <br>
+  <% end %>
+  <% if (!@administrator.pembina == "") %>
+    <%= image_tag(@administrator.fotopembina.thumb.url) %>
+    Pembina : <%= @administrator.pembina %> <br>
+  <% end %>
+  <% if (!@administrator.penasihat == "") %>
+    <%= image_tag(@administrator.fotopenasihat.thumb.url) %>
+    Penasihat : <%= @administrator.penasihat %> <br>
   <% end %>
 
   <%= link_to 'Edit', edit_administrator_path(@administrator) %>
