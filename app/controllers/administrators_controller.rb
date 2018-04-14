@@ -6,17 +6,30 @@ class AdministratorsController < ApplicationController
   def create
     debugger
     @administrator = Administrator.new(administrator_params)
-
     if @administrator.save
       flash[:success] = "Your Administrators successfully create"
-      render administrators_path
+      redirect_to administrators_path
     else
       render 'new'
     end
   end
 
   def index
-    @administrator = Administrator.all
+    @administrator = Administrator.last
+  end
+
+  def edit
+    @administrator = Administrator.find(params[:id])
+  end
+
+  def update
+    @administrator = Administrator.find(params[:id])
+    if (@administrator.update(administrator_params))
+      flash[:success] = "Your Administrators successfully create"
+      render 'index'
+    else
+      render 'edit'
+    end
   end
 
   private
