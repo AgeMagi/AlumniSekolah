@@ -1,12 +1,12 @@
 <div class='event-main'>
-  <div class='box-default event-list'>
+<div class='box-default event-list'>
     <div class='event-span'>
-      <h1><%= @event.title %></h1>
-      <p><%= @event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-      <% @photos.each do |p| %>
-        <%= image_tag(p.foto.thumb.url) %>
-      <% end %> <br> <br>
-      <p><%= @event.narasi %></p>
+        <h1><%= @event.title %></h1>
+        <p><%= @event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+        <% @photos.each do |p| %>
+            <%= image_tag(p.foto) %>
+        <% end %> <br> <br>
+        <p><%= @event.narasi %></p>
     </div>
 
     <%= link_to 'Add Participant', new_event_participant_path(@event) %> <br>
@@ -15,28 +15,31 @@
     <%= link_to 'Back', events_path %>
 
     <% @participants.each do |p| %>
-      <p><%= p.name %></p>
-      <p><%= p.email %></p>
+    <p><%= p.name %></p>
+    <p><%= p.email %></p>
     <% end %>
-  </div>
+</div>
 
-  <div class='box-default' id='event-next'>
+<div class='box-default' id='event-next'>
     <h1>Event Lainnya</h1>
     <hr>
     <%@events.each do |event| %>
-      <div class='side-event'>
-        <% if (event.id != (params[:id]).to_i) %>
-          <h1><%= link_to event.title, event_path(event) %> </h1>
-          <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-          <% @photos.each do |p| %>
-            <%= image_tag(p.foto.thumb.url) %>
-          <% end %>
-          <hr>
-        <% end %>
-      </div>
+        <div class='side-event'>
+            <% if (event.id != (params[:id]).to_i) %>
+                <div class='side-event-photo'>
+                    <% event.photos.each do |p| %>
+                        <%= image_tag(p.foto, width: 350, height: 250) %>
+                    <% end %>
+                </div>
+                <br>
+                <h1><%= link_to event.title, event_path(event) %> </h1>
+                <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+                <hr>
+            <% end %>
+        </div>
     <% end %>
-  </div>
-  
+</div>
+
 </div>
 
 <p id="notice"><%= notice %></p>
