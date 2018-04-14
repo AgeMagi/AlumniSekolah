@@ -12,11 +12,11 @@ class Administrator < ApplicationRecord
 
   private
     def foto_size_validation
-      errors[:fotoketua1] << "should be less than 500KB" if foto.size > 0.5.megabytes
-      errors[:fotoketua2] << "should be less than 500KB" if foto.size > 0.5.megabytes
-      errors[:fotobendahara1] << "should be less than 500KB" if foto.size > 0.5.megabytes
-      errors[:fotobendahara2] << "should be less than 500KB" if foto.size > 0.5.megabytes
-      errors[:fotopembina] << "should be less than 500KB" if foto.size > 0.5.megabytes
-      errors[:fotopenasihat] << "should be less than 500KB" if foto.size > 0.5.megabytes
+      errors[:fotoketua1] << "should be less than 500KB" if fotoketua1.size > 0.5.megabytes
+      errors[:fotoketua2] << "should be less than 500KB" if fotoketua2.size > 0.5.megabytes
+      errors[:fotobendahara1] << "should be less than 500KB" if fotobendahara1.size > 0.5.megabytes
+      errors[:fotobendahara2] << "should be less than 500KB" if fotobendahara2.size > 0.5.megabytes
+      errors[:fotopembina] << "should be less than 500KB" if fotopembina.size > 0.5.megabytes
+      errors[:fotopenasihat] << "should be less than 500KB" if fotopenasihat.size > 0.5.megabytes
     end
 end

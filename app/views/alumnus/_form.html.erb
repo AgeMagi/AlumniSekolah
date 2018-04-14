@@ -25,6 +25,24 @@
 
       <div class="edit">
         <div class='edit-left'>
+          <%= form.label(:email, "Email") %>
+        </div>
+        <div class='edit-right'>
+          <%= form.text_field :email, id: :alumnu_email %>
+        </div>
+      </div>
+
+      <div class="edit">
+        <div class='edit-left'>
+          <%= form.label(:nohp, "No Hp") %>
+        </div>
+        <div class='edit-right'>
+          <%= form.text_field :nohp, id: :alumnu_nohp %>
+        </div>
+      </div>
+
+      <div class="edit">
+        <div class='edit-left'>
           <%= form.label(:kelas1, "Kelas 1") %>
         </div>
         <div class='edit-right'>
