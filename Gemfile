@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bcrypt', platform: :ruby
+
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 

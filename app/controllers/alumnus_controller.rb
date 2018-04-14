@@ -27,7 +27,6 @@ class AlumnusController < ApplicationController
     @alumnu = Alumnu.new(alumnu_params)
     @photo = Photo.new
     @photo.foto = params[:alumnu][:foto]
-
     respond_to do |format|
       if @alumnu.save
         @photo.alumnu_id = @alumnu.id
