@@ -14,8 +14,12 @@ h1 {
   color: #3f3f3f;
 }
 
+.event-span img {
+    clip-path: rect(0px,60px,200px,0px);
+}
+
 .event-main {
-    width: 100%;
+    // width: 100%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +36,17 @@ h1 {
 }
 
 .event-part {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.event-span-photo {
+    //width: 141px;
+    height: 176px;
+    overflow: hidden;
+}
+
+.event-span-photo img {
+
 }
 
 #event-next, #event-calendar {

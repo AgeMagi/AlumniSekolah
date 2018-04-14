@@ -6,6 +6,9 @@
       <% @events.each do |event| %>
         <% if event.dilaksanakan >= Date.today %>
           <div class='box-default event-span'>
+            <% @photos.each do |p| %>
+              <%= image_tag(p.foto) %>
+            <% end %>
             <h1><%= event.title %></h1>
             <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
             <p><%= truncate event.narasi, length: 300 %></p>
@@ -23,6 +26,12 @@
       <% @events.each do |event| %>
         <% if event.dilaksanakan < Date.today %>
           <div class='box-default event-span'>
+            <div class='event-span-photo'>
+              <% event.photos.each do |p| %>
+                <%= image_tag(p.foto) %>
+              <% end %>
+            </div>
+            <br>
             <h1><%= event.title %></h1>
             <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
             <p style="display: inline;"><%= truncate event.narasi, length: 300 %></p>
@@ -34,7 +43,6 @@
       <% end %>
     </div>
 
-    <p id="notice"><%= notice %></p>
   </div>
 
   <div class='box-default' id='event-calendar'>

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180414022343) do
     t.string "ketua2"
     t.string "fotoketua2"
     t.string "bendahara1"
-    t.string "fotobendahara1"
+    t.string "fotobenahara1"
     t.string "bendahara2"
     t.string "fotobendahara2"
     t.string "pembina"

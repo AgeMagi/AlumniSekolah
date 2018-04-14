@@ -41,6 +41,7 @@ h2 {
 }
 
 .alumni-span {
+    word-wrap: break-word;
     background-color: white;
     margin-bottom: 2vh;
     display: flex;
@@ -54,6 +55,10 @@ h2 {
 
 .alumni-controller {
     display: flex;
+}
+
+.alumni-data{
+    word-wrap: break-word;
 }
 
 .alumni-photo {
