@@ -37,6 +37,19 @@ body {
     display: inline;
 }
 
+#logo-jumbo {
+    text-align: right;
+    //padding-right: 0;
+}
+
+#search-jumbo {
+    text-align: left;
+    //padding: auto;
+    top: 50%;
+    bottom: 50%;
+    padding-left: 0;
+}
+
 .button-default {
     background-color: #57BFE3;
     border: 2px solid #57BFE3;
@@ -89,4 +102,10 @@ body {
     background-color: white;
     border: 1px solid #E1E1E1;
     padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .jumbotron .row {
+        display: block;
+    }
 }
