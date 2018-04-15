@@ -4,7 +4,6 @@ class AdministratorsController < ApplicationController
   end
 
   def create
-    debugger
     @administrator = Administrator.new(administrator_params)
     if @administrator.save
       flash[:success] = "Your Administrators successfully create"
