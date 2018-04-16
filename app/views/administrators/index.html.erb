@@ -3,29 +3,47 @@
   <%= render :partial => 'administrators/form' %>
 <% else %>
   <% @administrator = Administrator.last %>
-  <% if !(@administrator.ketua1 == "") %>
-    <%= image_tag(@administrator.fotoketua1.thumb.url) %>
-    Ketua 1: <%= @administrator.ketua1 %> <br>
+  <% debugger %>
+  <p><%= @administrator.ketua1 %></p>
+  <% if @administrator.fotoketua1.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotoketua1.thumb.url) %> <br>
   <% end %>
-  <% if !(@administrator.ketua2 == "") %>
-    <%= image_tag(@administrator.fotoketua2.thumb.url) %>
-    Ketua 2: <%= @administrator.ketua2 %> <br>
+
+  <p><%= @administrator.ketua2 %> </p>
+  <% if @administrator.fotoketua2.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotoketua2.thumb.url) %> <br>
   <% end %>
-  <% if !(@administrator.bendahara1 == "") %>
-    <%= image_tag(@administrator.fotobendahara1.thumb.url) %>
-    Bendahara 1: <%= @administrator.bendahara1 %> <br>
+
+  <p><%= @administrator.bendahara1 %></p>
+  <% if @administrator.fotobendahara1.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotobendahara1.thumb.url) %> <br>
   <% end %>
-  <% if !(@administrator.bendahara2 == "") %>
-    <%= image_tag(@administrator.fotobendahara2.thumb.url) %>
-    Bendahara 2: <%= @administrator.bendahara2 %> <br>
+
+  <p><%= @administrator.bendahara2 %></p>
+  <% if @administrator.fotobendahara2.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotobendahara2.thumb.url) %> <br>
   <% end %>
-  <% if (!@administrator.pembina == "") %>
-    <%= image_tag(@administrator.fotopembina.thumb.url) %>
-    Pembina : <%= @administrator.pembina %> <br>
+
+  <p><%= @administrator.pembina %> </p>
+  <% if @administrator.fotopembina.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotopembina.thumb.url) %> <br>
   <% end %>
-  <% if (!@administrator.penasihat == "") %>
-    <%= image_tag(@administrator.fotopenasihat.thumb.url) %>
-    Penasihat : <%= @administrator.penasihat %> <br>
+
+  <p><%= @administrator.penasihat %></p>
+  <% if @administrator.fotopenasihat.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotopenasihat.thumb.url) %> <br>
   <% end %>
 
   <%= link_to 'Edit', edit_administrator_path(@administrator) %>
