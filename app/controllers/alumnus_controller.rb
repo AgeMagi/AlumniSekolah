@@ -27,7 +27,6 @@ class AlumnusController < ApplicationController
     @alumnu = Alumnu.new(alumnu_params)
     respond_to do |format|
       if @alumnu.save
-        debugger
         if (!params[:alumnu][:foto].nil?)
           @alumnu.create_photo!(:foto => params[:alumnu][:foto])
         end
