@@ -3,7 +3,6 @@
   <%= render :partial => 'administrators/form' %>
 <% else %>
   <% @administrator = Administrator.last %>
-  <% debugger %>
   <p><%= @administrator.ketua1 %></p>
   <% if @administrator.fotoketua1.nil? %>
     <%= image_tag('default.png', width: 125, height: 125) %> <br>
