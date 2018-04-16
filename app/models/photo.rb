@@ -1,8 +1,8 @@
 class Photo < ApplicationRecord
-
   mount_uploader :foto, ImageUploader
   validates_processing_of :foto
   validate :foto_size_validation
+  validates :foto, presence: true
 
   private
   def foto_size_validation

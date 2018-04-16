@@ -4,8 +4,12 @@
             <div class='event-span'>
                 <h1><%= @event.title %></h1>
                 <p><%= @event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-                <% @photos.each do |p| %>
-                    <%= image_tag(p.foto) %>
+                <% if !@event.photos.any? %>
+                  <%= image_tag('default_event.png', width: 350, height: 250) %>
+                <% else %>
+                  <% @event.photos.each do |p| %>
+                    <%= image_tag(p.foto, width: 350, height: 250) %>
+                  <% end %>
                 <% end %> <br> <br>
                 <p><%= @event.narasi %></p>
             </div>
@@ -28,9 +32,13 @@
                 <div class='side-event'>
                     <% if (event.id != (params[:id]).to_i) %>
                         <div class='side-event-photo'>
+                          <% if !event.photos.any? %>
+                            <%= image_tag('default_event.png', width: 350, height: 250) %>
+                          <% else %>
                             <% event.photos.each do |p| %>
-                                <%= image_tag(p.foto, width: 350, height: 250) %>
+                              <%= image_tag(p.foto, width: 350, height: 250) %>
                             <% end %>
+                          <% end %>
                         </div>
                         <br>
                         <h1><%= link_to event.title, event_path(event) %> </h1>

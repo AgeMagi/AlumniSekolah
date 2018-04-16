@@ -8,8 +8,12 @@
           <% if event.dilaksanakan >= Date.today %>
             <div class='box-default event-span'>
               <div class='event-span-photo'>
-                <% event.photos.each do |p| %>
-                  <%= image_tag(p.foto) %>
+                <% if !event.photos.any? %>
+                  <% image_tag('default_event.png') %>
+                <% else %>
+                  <% event.photos.each do |p| %>
+                    <%= image_tag(p.foto) %>
+                  <% end %>
                 <% end %>
               </div>
               <br>
@@ -34,8 +38,12 @@
           <% if event.dilaksanakan < Date.today %>
             <div class='box-default event-span'>
               <div class='event-span-photo'>
-                <% event.photos.each do |p| %>
-                  <%= image_tag(p.foto) %>
+                <% if !event.photos.any? %>
+                  <% image_tag('default_event.png') %>
+                <% else %>
+                  <% event.photos.each do |p| %>
+                    <%= image_tag(p.foto) %>
+                  <% end %>
                 <% end %>
               </div>
               <br>

@@ -71,7 +71,11 @@
             <% @alumnus.each do |alumnu| %>
                 <div class='alumni-span'>
                     <div class='alumni-photo'>
-                        <%= image_tag(alumnu.photo.foto.thumb.url) %>
+                      <% if (alumnu.photo.nil?) %>
+                        <%= image_tag('default.png', width: 125, height: 125) %>
+                      <% else %>
+                        <%= image_tag(@alumnu.photo.foto.thumb.url) %>
+                      <% end %>
                     </div>
                     <div class='alumni-data'>
                         <h1><%= alumnu.nama %></h1>
@@ -92,6 +96,5 @@
         </div>
     </div>
 
-    <%= link_to 'logout', logout_path, method: :delete%>
     <%= link_to 'New Alumnu', new_alumnu_path %>
 </div>

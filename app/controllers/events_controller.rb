@@ -31,8 +31,10 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     respond_to do |format|
       if @event.save
-        params[:photos][:foto].each do |a|
-          @photo = @event.photos.create!(:foto => a)
+        if params[:photos][:foto].any?
+          params[:photos][:foto].each do |a|
+            @photo = @event.photos.create!(:foto => a)
+          end
         end
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
@@ -79,6 +81,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :narasi, :dilaksanakan, :dilaksanakan, photos_attributes: [:id, :event_id, :foto])
+      params.require(:event).permit(:title, :narasi, :dilaksanakan, photos_attributes: [:id, :event_id, :foto])
     end
 end

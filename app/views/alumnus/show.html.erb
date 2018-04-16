@@ -22,7 +22,11 @@
 
 <p>
   <strong>ProfilePhoto:</strong>
-  <%= image_tag(@alumnu.photo.foto.thumb.url) %>
+  <% if (@alumnu.photo.nil?) %>
+    <%= image_tag('default.png', width: 125, height: 125) %>
+  <% else %>
+    <%= image_tag(@alumnu.photo.foto.thumb.url) %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |

@@ -25,12 +25,12 @@ class AlumnusController < ApplicationController
   # POST /alumnus.json
   def create
     @alumnu = Alumnu.new(alumnu_params)
-    @photo = Photo.new
-    @photo.foto = params[:alumnu][:foto]
     respond_to do |format|
       if @alumnu.save
-        @photo.alumnu_id = @alumnu.id
-        @photo.save
+        debugger
+        if (!params[:alumnu][:foto].nil?)
+          @alumnu.create_photo!(:foto => params[:alumnu][:foto])
+        end
         format.html { redirect_to @alumnu, notice: 'Alumnu was successfully created.' }
         format.json { render :show, status: :created, location: @alumnu }
       else
@@ -81,6 +81,6 @@ class AlumnusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnu_params
-      params.require(:alumnu).permit(:nama, :email, :nohp, :kelas1, :kelas2, :kelas3)
+      params.require(:alumnu).permit(:nama, :email, :nohp, :kelas1, :kelas2, :kelas3, photo_attributes: [:id, :alumnu_id, :foto])
     end
 end
