@@ -11,24 +11,18 @@
                     <%= image_tag(p.foto, width: 350, height: 250) %>
                   <% end %>
                 <% end %> <br> <br>
-                <p><%= simple_format(@event.narasi) %></p>
+                <p><%= @event.narasi %></p>
             </div>
 
-            <% if (@event.dilaksanakan >= Date.today and !logged_in?) %>
-              <%= link_to 'Join Event', new_event_participant_path(@event) %> <br>
-            <% elsif logged_in? %>
-              Partisipan : <br>
-              <ul>
-                <% @participants.each do |p| %>
-                  <li>
-                    <%= p.name %> | <%= p.email %>
-                    <%= link_to 'Hapus', event_participant_path(p), method: :delete, data: { confirm: 'Are you sure?' }%>
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
+            <%= link_to 'Add Participant', new_event_participant_path(@event) %> <br>
 
+            <%= link_to 'Edit', edit_event_path(@event) %> |
             <%= link_to 'Back', events_path %>
+
+            <% @participants.each do |p| %>
+            <p><%= p.name %></p>
+            <p><%= p.email %></p>
+            <% end %>
         </div>
 
         <div class='col-sm-4 box-default' id='event-next'>
