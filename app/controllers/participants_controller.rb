@@ -54,7 +54,7 @@ class ParticipantsController < ApplicationController
   # DELETE /participants/1
   # DELETE /participants/1.json
   def destroy
-    @participant = Paricipant.find(params[:id])
+    @participant = Participant.find(params[:id])
     @participant.destroy
     respond_to do |format|
       format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
