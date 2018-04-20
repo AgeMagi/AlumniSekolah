@@ -66,10 +66,8 @@
                     <% end %>
                 </div>
             </div>
-            <% if logged_in? %>
-                <hr>
-                <%= link_to 'Add Member', new_alumnu_path, :class => 'button-default' %>
-            <% end %>
+            <hr>
+            <%= link_to 'Add Member', new_alumnu_path, :class => 'button-default' %>
         </div>
         <div class='col-lg-8 col-xs-12 box-default' id='alumni-list'>
             <% @alumnus.order(:nama).each do |alumnu| %>

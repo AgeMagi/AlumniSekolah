@@ -108,13 +108,9 @@
 
             <% if alumnu.errors.any? %>
                 <br>
-                <div id="error_explanation">
-                    <h2>Ada data yang belum diisi: </h2>
-                    <ul>
-                        <% alumnu.errors.full_messages.each do |message| %>
-                        <li><%= message %></li>
-                        <% end %>
-                    </ul>
+                <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <p>Error: Ada data yang tidak terisi!</p>
                 </div>
             <% end %>
         </div>

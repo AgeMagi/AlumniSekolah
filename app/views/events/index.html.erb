@@ -23,8 +23,12 @@
               <p><%= truncate event.narasi, length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
+<<<<<<< HEAD
                 <p><%= link_to 'Edit', edit_event_path(event) %></p>
                 <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+=======
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+>>>>>>> 941cdecec0fdc8790f32bc3532016a7d7eec6ea2
               <% end %>
             </div>
           <% end %>
@@ -48,12 +52,21 @@
               </div>
               <br>
               <h1><%= event.title %></h1>
+<<<<<<< HEAD
               <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
               <p style="display: inline;"><%= truncate event.narasi, length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
                 <p><%= link_to 'Edit', edit_event_path(event) %></p>
                 <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+=======
+              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+              <br>
+              <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
+              <p><%= link_to 'Read more..', event %></p>
+              <% if logged_in? %>
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+>>>>>>> 941cdecec0fdc8790f32bc3532016a7d7eec6ea2
               <% end %>
             </div>
           <% end %>
