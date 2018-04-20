@@ -1,17 +1,13 @@
 <%= form_with(model: event, local: true, multipart: true) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class='container col-md-4 col-xs-8 event-main'>
+
+    <% if event.errors.any? %>
+      <div class="alert alert-danger">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p>Error: Ada data yang tidak terisi!</p>
+      </div>
+    <% end %>
+
     <div class='event-list box-default'>
       <h1>Edit Event</h1>
 
@@ -40,11 +36,7 @@
       <div class="actions">
         <%= form.submit %>
       </div>
-
-      <%= link_to 'Show', @event %> |
-      <%= link_to 'Back', events_path %>
     </div>
-
   </div>
 
 <% end %>

@@ -23,7 +23,7 @@
               <p><%= truncate event.narasi, length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
-                <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
           <% end %>
@@ -47,11 +47,12 @@
               </div>
               <br>
               <h1><%= event.title %></h1>
-              <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
+              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+              <br>
               <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
-                <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
           <% end %>
