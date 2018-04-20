@@ -92,6 +92,7 @@
         </div>
     </div>
 
-    <%= link_to 'logout', logout_path, method: :delete%>
-    <%= link_to 'New Alumnu', new_alumnu_path %>
+    <% if logged_in? %>
+        <%= link_to 'New Alumnu', new_alumnu_path %>
+    <% end %>
 </div>
