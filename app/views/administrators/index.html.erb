@@ -38,12 +38,28 @@
     <%= image_tag(@administrator.fotopembina.thumb.url) %> <br>
   <% end %>
 
-  <p><%= @administrator.penasihat %></p>
-  <% if @administrator.fotopenasihat.nil? %>
+  <p><%= @administrator.penasihat1 %></p>
+  <% if @administrator.fotopenasihat1.nil? %>
     <%= image_tag('default.png', width: 125, height: 125) %> <br>
   <% else %>
-    <%= image_tag(@administrator.fotopenasihat.thumb.url) %> <br>
+    <%= image_tag(@administrator.fotopenasihat1.thumb.url) %> <br>
   <% end %>
 
-  <%= link_to 'Edit', edit_administrator_path(@administrator) %>
+  <p><%= @administrator.penasihat2 %></p>
+  <% if @administrator.fotopenasihat2.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotopenasihat2.thumb.url) %> <br>
+  <% end %>
+
+  <p><%= @administrator.penasihat3 %></p>
+  <% if @administrator.fotopenasihat3.nil? %>
+    <%= image_tag('default.png', width: 125, height: 125) %> <br>
+  <% else %>
+    <%= image_tag(@administrator.fotopenasihat3.thumb.url) %> <br>
+  <% end %>
+
+  <% if logged_in? %>
+    <%= link_to 'Edit', edit_administrator_path(@administrator) %>
+  <% end %>
 <% end %>

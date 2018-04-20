@@ -28,10 +28,13 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    debugger
     @event = Event.new(event_params)
     respond_to do |format|
       if @event.save
-        if params[:photos][:foto].any?
+        if params[:photos].nil?
+
+        else
           params[:photos][:foto].each do |a|
             @photo = @event.photos.create!(:foto => a)
           end
@@ -71,6 +74,10 @@ class EventsController < ApplicationController
 
   def search
     @events = Event.where("title LIKE ?", "%#{params[:search_events]}%")
+  end
+
+  def home
+    @events = Event.all
   end
 
   private

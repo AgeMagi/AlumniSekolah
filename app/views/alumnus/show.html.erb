@@ -29,5 +29,7 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |
+<% end %>
 <%= link_to 'Back', alumnus_path %>

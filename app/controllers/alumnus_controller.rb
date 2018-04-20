@@ -45,9 +45,13 @@ class AlumnusController < ApplicationController
     respond_to do |format|
       if @alumnu.update(alumnu_params)
         if (!params[:alumnu][:foto].nil?)
-          @alumnu.photo.remove_foto
-          @alumnu.photo.foto = params[:alumnu][:foto]
-          @alumnu.photo.save
+          if !@alumnu.photo.nil?
+            @alumnu.photo.remove_foto
+            @alumnu.photo.foto = params[:alumnu][:foto]
+            @alumnu.photo.save
+          else
+            @alumnu.create_photo!(:foto => params[:alumnu][:foto])
+          end
         end
         format.html { redirect_to @alumnu, notice: 'Alumnu was successfully updated.' }
         format.json { render :show, status: :ok, location: @alumnu }
