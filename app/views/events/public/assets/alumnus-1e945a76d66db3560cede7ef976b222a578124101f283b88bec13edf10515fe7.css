@@ -1,0 +1,96 @@
+/* line 5, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 9, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+h2 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #3f3f3f;
+}
+
+/* line 15, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+#alumni-main {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 21, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+#alumni-filter, #alumni-list, .alumni-span {
+  background-color: white;
+  border: 1px solid #E1E1E1;
+  padding: 20px;
+}
+
+/* line 27, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+#alumni-filter {
+  text-align: left;
+  top: 0;
+  margin-right: 5px;
+  height: 100%;
+}
+
+/* line 34, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+#alumni-list {
+  text-align: left;
+  margin-left: 5px;
+  max-width: 40vw;
+  word-wrap: break-word;
+  height: 100%;
+}
+
+/* line 42, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.alumni-span {
+  background-color: white;
+  margin-bottom: 2vh;
+  display: flex;
+}
+
+/* line 48, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.alumni-span h1 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #757475;
+}
+
+/* line 54, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.alumni-controller {
+  display: flex;
+}
+
+/* line 58, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.alumni-photo {
+  margin-right: 1.5vw;
+}
+
+/* line 67, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.edit {
+  display: flex;
+}
+
+/* line 71, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.edit-left {
+  width: 35%;
+  text-align: right;
+  margin: 5px;
+  margin-right: 5px;
+}
+
+/* line 78, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.edit-right {
+  width: 65%;
+  margin: 5px;
+}
+
+/* line 83, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.edit-right input {
+  width: 80%;
+}
+
+/* line 87, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/alumnus.css.scss */
+.edit-right textarea {
+  width: 80%;
+  height: 100px;
+}
