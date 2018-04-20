@@ -54,10 +54,10 @@ class ParticipantsController < ApplicationController
   # DELETE /participants/1
   # DELETE /participants/1.json
   def destroy
-    @participant = Paricipant.find(params[:id])
+    @participant = Participant.find(params[:event_id])
     @participant.destroy
     respond_to do |format|
-      format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
+      format.html { redirect_to event_path(Event.find(params[:id])), notice: 'Participant was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -65,7 +65,6 @@ class ParticipantsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_participant
-      debugger
       @participant = Participant.find(params[:participant_id])
     end
 

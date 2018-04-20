@@ -13,16 +13,28 @@
                 <% end %> <br> <br>
                 <p><%= @event.narasi %></p>
             </div>
-
-            <%= link_to 'Add Participant', new_event_participant_path(@event) %> <br>
-
-            <%= link_to 'Edit', edit_event_path(@event) %> |
+            <% if logged_in? %>
+              <% if @event.dilaksanakan >= Date.today %>
+                Partisipan : <br>
+                <ul>
+                  <% @participants.each do |p| %>
+                    <li>
+                      <%= p.name %> |
+                      <%= p.email %>
+                      <%= link_to 'Destroy', event_participant_path(p), method: :delete %>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
+              <%= link_to 'Edit', edit_event_path(@event) %> |
+            <% else %>
+              <% if @event.dilaksanakan >= Date.today %>
+                <%= link_to 'Join Event', new_event_participant_path(@event) %> <br>
+              <% end %>
+            <% end %>
             <%= link_to 'Back', events_path %>
 
-            <% @participants.each do |p| %>
-            <p><%= p.name %></p>
-            <p><%= p.email %></p>
-            <% end %>
+
         </div>
 
         <div class='col-sm-4 box-default' id='event-next'>
