@@ -1,20 +1,26 @@
-<<<<<<< HEAD
-<h1>Create new Users</h1>
+<div class="container">
+  <div class="box-default user-main">
+    <div style="width: 100%">
+      <h1>Create new User</h1>
+      <br>
+    </div>
 
-<%= form_for @user do |f| %>
-  <%= f.label(:username) %> <br>
-  <%= f.text_field(:username) %> <br>
-  <%= f.label(:password) %> <br>
-  <%= f.password_field(:password) %> <br>
+    <%= form_for @user do |f|%>
+      <div class="form-group" align = "center">
+        <div class="container-fluid">
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter Username" %>
+        </div>
+      </div>
+      <div class="form-group" align = "center">
+        <div class="container-fluid">
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+        </div>
+      </div>
 
-  <%= f.submit("Create Account") %>
-=======
-<%= form_for @user do |f| %>
-  <%= f.label(:username) %> <br>
-  <%= f.text_field(:username) %> <br>
-  <%= f.label(:password) %> <br>
-  <%= f.password_field(:password) %> <br>
-
-  <%= f.submit("Create Account") %>
->>>>>>> 72853ed04a13cf9cc3a83be13228c45c46b8bc87
-<% end %>
+      <div align="center">
+        <%= f.submit("Create Account", class: "button-default") %>
+      </div>
+    <% end %>
+    <br>
+  </div>
+</div>
