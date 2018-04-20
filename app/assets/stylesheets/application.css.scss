@@ -1,5 +1,12 @@
 @import "bootstrap";
 
+//= require simple_calendar
+
+.simple-calender {
+  heigth: 100%;
+  width: 100%;
+}
+
 body {
     font-family: "Barlow";
     background-color: #F8F7F8;

@@ -1,0 +1,15 @@
+/* line 1, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/sessions.css.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #005f9e;
+}
+
+/* line 7, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/sessions.css.scss */
+.login-main {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  width: 450px;
+}

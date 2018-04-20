@@ -23,8 +23,6 @@
                 </div>
                 <div class="col-md-7 name">
                     <p><%= @administrator.penasihat1 %> </p>
-                    <p><%= @administrator.penasihat2 %> </p>
-                    <p><%= @administrator.penasihat3 %> </p>
                 </div>
             </div>
 
@@ -65,7 +63,7 @@
             </div>
 
             <% if logged_in? %>
-                <%= link_to 'Edit Administrator', edit_administrator_path(@administrator), :class => 'button-default' %>
+                <%= link_to 'Edit', edit_administrator_path(@administrator), :class => 'button-default' %>
             <% end %>
         <% end %>
     </div>
