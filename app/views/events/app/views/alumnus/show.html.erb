@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @alumnu.nama %>
+</p>
+
+<p>
+  <strong>Kelas1:</strong>
+  <%= @alumnu.kelas1 %>
+</p>
+
+<p>
+  <strong>Kelas2:</strong>
+  <%= @alumnu.kelas2 %>
+</p>
+
+<p>
+  <strong>Kelas3:</strong>
+  <%= @alumnu.kelas3 %>
+</p>
+
+<p>
+  <strong>ProfilePhoto:</strong>
+  <% if (@alumnu.photo.nil?) %>
+    <%= image_tag('default.png', width: 125, height: 125) %>
+  <% else %>
+    <%= image_tag(@alumnu.photo.foto.thumb.url) %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |
+<%= link_to 'Back', alumnus_path %>

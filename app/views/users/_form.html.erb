@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Create new Users</h1>
 
 <%= form_for @user do |f| %>
@@ -7,4 +8,13 @@
   <%= f.password_field(:password) %> <br>
 
   <%= f.submit("Create Account") %>
+=======
+<%= form_for @user do |f| %>
+  <%= f.label(:username) %> <br>
+  <%= f.text_field(:username) %> <br>
+  <%= f.label(:password) %> <br>
+  <%= f.password_field(:password) %> <br>
+
+  <%= f.submit("Create Account") %>
+>>>>>>> 72853ed04a13cf9cc3a83be13228c45c46b8bc87
 <% end %>

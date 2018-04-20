@@ -9,7 +9,7 @@
             <div class='box-default event-span'>
               <div class='event-span-photo'>
                 <% if !event.photos.any? %>
-                  <% image_tag('default_event.png') %>
+                  <% image_tag('default_event.png', height: 200) %>
                 <% else %>
                   <% event.photos.each do |p| %>
                     <%= image_tag(p.foto) %>
@@ -23,7 +23,6 @@
               <p><%= truncate event.narasi, length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
-                <p><%= link_to 'Edit', edit_event_path(event) %></p>
                 <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
@@ -49,10 +48,9 @@
               <br>
               <h1><%= event.title %></h1>
               <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-              <p style="display: inline;"><%= truncate event.narasi, length: 300 %></p>
+              <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
-                <p><%= link_to 'Edit', edit_event_path(event) %></p>
                 <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
@@ -67,5 +65,7 @@
       </div>
     </div>
   </div>
-  <%= link_to 'New Event', new_event_path %>
+  <% if logged_in? %>
+    <%= link_to 'New Event', new_event_path %>
+  <% end %>
 </div>

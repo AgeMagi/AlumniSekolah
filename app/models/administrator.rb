@@ -4,16 +4,20 @@ class Administrator < ApplicationRecord
   validates :bendahara1, presence: true
   validates :bendahara2, presence: true
   validates :pembina, presence: true
-  validates :penasihat, presence: true
+  validates :penasihat1, presence: true
+  validates :penasihat2, presence: true
+  validates :penasihat3, presence: true
 
   mount_uploader :fotoketua1, ImageUploader
   mount_uploader :fotoketua2, ImageUploader
   mount_uploader :fotobendahara1, ImageUploader
   mount_uploader :fotobendahara2, ImageUploader
   mount_uploader :fotopembina, ImageUploader
-  mount_uploader :fotopenasihat,ImageUploader
+  mount_uploader :fotopenasihat1,ImageUploader
+  mount_uploader :fotopenasihat2,ImageUploader
+  mount_uploader :fotopenasihat3,ImageUploader
 
-  validates_processing_of :fotoketua1, :fotoketua2, :fotobendahara1, :fotobendahara2, :fotopembina, :fotopenasihat
+  validates_processing_of :fotoketua1, :fotoketua2, :fotobendahara1, :fotobendahara2, :fotopembina, :fotopenasihat1, :fotopenasihat2, :fotopenasihat3
 
   validate :foto_size_validation
 
@@ -24,6 +28,8 @@ class Administrator < ApplicationRecord
       errors[:fotobendahara1] << "should be less than 500KB" if fotobendahara1.size > 0.5.megabytes
       errors[:fotobendahara2] << "should be less than 500KB" if fotobendahara2.size > 0.5.megabytes
       errors[:fotopembina] << "should be less than 500KB" if fotopembina.size > 0.5.megabytes
-      errors[:fotopenasihat] << "should be less than 500KB" if fotopenasihat.size > 0.5.megabytes
+      errors[:fotopenasihat1] << "should be less than 500KB" if fotopenasihat1.size > 0.5.megabytes
+      errors[:fotopenasihat2] << "should be less than 500KB" if fotopenasihat2.size > 0.5.megabytes
+      errors[:fotopenasihat3] << "should be less than 500KB" if fotopenasihat3.size > 0.5.megabytes
     end
 end

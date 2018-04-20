@@ -1,0 +1,208 @@
+/* line 1, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #005f9e;
+}
+
+/* line 7, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-span h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+/* line 13, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-span h3 {
+  font-size: 1.2em;
+  color: #ff9900;
+}
+
+/* line 18, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-span img {
+  width: 100%;
+}
+
+/* line 22, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-main {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* line 27, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-main .row {
+  text-align: center;
+  margin: auto;
+}
+
+/* line 32, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-main .col-lg-8 {
+  margin: auto;
+}
+
+/* line 36, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-main .col-lg-4 {
+  margin: auto;
+}
+
+/* line 40, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-list {
+  text-align: left;
+  word-wrap: break-word;
+  margin-top: 0px;
+}
+
+/* line 46, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-part {
+  margin-bottom: 20px;
+}
+
+/* line 50, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-part p {
+  font-size: 1em;
+}
+
+/* line 54, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-span-photo {
+  height: 200px;
+  overflow: hidden;
+}
+
+/* line 59, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.event-span-photo img {
+  width: 100%;
+}
+
+/* line 63, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+#event-next, #event-calendar {
+  text-align: left;
+  height: 100%;
+  margin-top: 0px;
+}
+
+/* line 69, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.side-event-photo {
+  overflow: hidden;
+  height: 15vh;
+}
+
+/* line 74, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+#event-next img {
+  width: 100%;
+  height: auto;
+}
+
+/* Event Edit */
+/* line 81, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.edit {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* line 87, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.edit-left {
+  width: 35%;
+  text-align: right;
+  margin: 5px;
+  margin-right: 5px;
+}
+
+/* line 94, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.edit-right {
+  width: 65%;
+  margin: 5px;
+}
+
+/* line 99, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.edit input {
+  width: 100%;
+}
+
+/* line 103, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.edit textarea {
+  width: 100%;
+  min-height: 30em;
+}
+
+/* line 108, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.side-event h1 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* line 113, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+.side-event p {
+  font-size: 0.75em;
+}
+
+@media screen and (max-width: 998px) {
+  /* line 118, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .row {
+    display: block;
+  }
+
+  /* line 122, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .col-lg-8 {
+    display: block;
+  }
+
+  /* line 126, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .col-lg-4 {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 132, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  h1 {
+    font-size: 200px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  /* line 138, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-span h1 {
+    font-size: 200px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+
+  /* line 144, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-span h3 {
+    font-size: 200px;
+    color: #ffffff;
+  }
+
+  /* line 149, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .container {
+    margin: 0;
+  }
+
+  /* line 153, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .row {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 158, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .col-sm-8 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 163, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-main .col-sm-4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 168, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-part h1 {
+    font-size: 4em;
+  }
+
+  /* line 172, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/events.css.scss */
+  .event-span h1 {
+    font-size: 3.4em;
+  }
+}

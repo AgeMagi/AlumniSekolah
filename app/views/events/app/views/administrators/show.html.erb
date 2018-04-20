@@ -1,0 +1,41 @@
+<p><%= @administrator.ketua1 %></p>
+<% if @administrator.fotoketua1.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotoketua1.thumb.url) %> <br>
+<% end %>
+
+<p><%= @administrator.ketua2 %> </p>
+<% if @administrator.fotoketua2.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotoketua2.thumb.url) %> <br>
+<% end %>
+
+<p><%= @administrator.bendahara1 %></p>
+<% if @administrator.fotobendahara1.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotobendahara1.thumb.url) %> <br>
+<% end %>
+
+<p><%= @administrator.bendahara2 %></p>
+<% if @administrator.fotobendahara2.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotobendahara2.thumb.url) %> <br>
+<% end %>
+
+<p><%= @administrator.pembina %> </p>
+<% if @administrator.fotopembina.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotopembina.thumb.url) %> <br>
+<% end %>
+
+<p><%= @administrator.penasihat %></p>
+<% if @administrator.fotopenasihat.nil? %>
+  <%= image_tag('default.png', width: 125, height: 125) %> <br>
+<% else %>
+  <%= image_tag(@administrator.fotopenasihat.thumb.url) %> <br>
+<% end %>

@@ -1,10 +1,11 @@
 class ParticipantsController < ApplicationController
-  before_action :set_participant, only: [:show, :edit, :update, :destroy]
+  before_action :set_participant, only: [:show, :edit, :update]
 
   # GET /participants
   # GET /participants.json
   def index
     @participants = Participant.all
+    @event = Event.find(params[:event_id])
   end
 
   # GET /participants/1
@@ -28,8 +29,7 @@ class ParticipantsController < ApplicationController
     @participant.event_id = params[:event_id]
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to event_participants_path(@participant), notice: 'Participant was successfully created.' }
-        format.json { render :show, status: :created, location: @participant }
+        format.html { redirect_to events_path(@participant), notice: 'Participant was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
@@ -54,6 +54,7 @@ class ParticipantsController < ApplicationController
   # DELETE /participants/1
   # DELETE /participants/1.json
   def destroy
+    @participant = Paricipant.find(params[:id])
     @participant.destroy
     respond_to do |format|
       format.html { redirect_to participants_url, notice: 'Participant was successfully destroyed.' }
@@ -64,6 +65,7 @@ class ParticipantsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_participant
+      debugger
       @participant = Participant.find(params[:participant_id])
     end
 

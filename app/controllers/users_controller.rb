@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user.chance = 3
     if @user.save
       flash[:success] = "Your account was successfully created"
-      redirect_to events_path
+      redirect_to login_path
     else
       render 'new'
     end
