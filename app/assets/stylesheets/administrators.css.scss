@@ -1,0 +1,34 @@
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #005f9e;
+}
+
+.admin-main {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.admin-content {
+	padding: 20px;
+}
+
+.admin-nama {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.admin-nama p {
+	font-size: 1.3em;
+}
+
+.admin-nama .name, .title {
+	text-align: left;
+}
+
+.admin-nama .title p {
+	font-weight: 600;
+}
