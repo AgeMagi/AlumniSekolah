@@ -29,7 +29,7 @@ class AdministratorsController < ApplicationController
     @administrator = Administrator.find(params[:id])
     if (@administrator.update(administrator_params))
       flash[:success] = "Your Administrators successfully create"
-      render 'index'
+      redirect_to administrators_path
     else
       render 'edit'
     end
