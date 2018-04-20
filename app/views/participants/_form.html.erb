@@ -14,14 +14,24 @@
         </div>
       <% end %>
 
+      <br>
+
       <div class="participant-input">
-        <%= form.label :name %>
-        <%= form.text_field :name, id: :participant_name %>
+        <div class="col">
+          <p>Name</p>
+        </div>
+        <div class="col">
+          <%= form.text_field :name, id: :participant_name %>
+        </div>
       </div>
 
       <div class="participant-input">
-        <%= form.label :email %>
-        <%= form.text_field :email, id: :participant_email %>
+        <div class="col">
+          <p>Email</p>
+        </div>
+        <div class="col">
+          <%= form.text_field :email, id: :participant_email %>
+        </div>
       </div>
 
       <div class="actions">
