@@ -59,14 +59,15 @@
         <% end %>
       </div>
     </div>
-    <div class='col-lg-4 col-xs-12' id='event-calendar'>
-      <div class='box-default'>
-        <h1>Calendar</h1>
-        <hr>
+    <% if logged_in? %>
+      <div class='col-lg-4 col-xs-12' id='event-calendar'>
+        <div class='box-default'>
+          <h1>Create New Event</h1>
+          <hr>
+          <%= link_to 'Create Event', new_event_path, :class => 'button-default' %>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
-  <% if logged_in? %>
-    <%= link_to 'New Event', new_event_path %>
-  <% end %>
+
 </div>

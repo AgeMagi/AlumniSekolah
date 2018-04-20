@@ -1,46 +1,72 @@
-<p id="notice"><%= notice %></p>
-
-<div id='event-main'>
-  <div id='event-list'>
-    <div class='box-default event-part'>
-      <h1>Upcoming Events</h1>
-      <br>
-      <% @events.each do |event| %>
-        <% if event.dilaksanakan >= Date.today %>
-          <div class='box-default event-span'>
-            <h1><%= event.title %></h1>
-            <p><%= event.narasi %></p>
-            <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-            <p><%= link_to 'Show', event %></p>
-            <p><%= link_to 'Edit', edit_event_path(event) %></p>
-            <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-          </div>
+<div class='container event-main'>
+  <div class='row'>
+    <div class='col-lg-8 col-xs-12 event-list'>
+      <div class='box-default event-part'>
+        <h1>Upcoming Events</h1>
+        <br>
+        <% @events.each do |event| %>
+          <% if event.dilaksanakan >= Date.today %>
+            <div class='box-default event-span'>
+              <div class='event-span-photo'>
+                <% if !event.photos.any? %>
+                  <% image_tag('default_event.png', height: 200) %>
+                <% else %>
+                  <% event.photos.each do |p| %>
+                    <%= image_tag(p.foto) %>
+                  <% end %>
+                <% end %>
+              </div>
+              <br>
+              <h1><%= event.title %></h1>
+              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+              <br>
+              <p><%= truncate event.narasi, length: 300 %></p>
+              <p><%= link_to 'Read more..', event %></p>
+              <% if logged_in? %>
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+
+      <div class='box-default event-part'>
+        <h1>Past Events</h1>
+        <br>
+        <% @events.each do |event| %>
+          <% if event.dilaksanakan < Date.today %>
+            <div class='box-default event-span'>
+              <div class='event-span-photo'>
+                <% if !event.photos.any? %>
+                  <% image_tag('default_event.png') %>
+                <% else %>
+                  <% event.photos.each do |p| %>
+                    <%= image_tag(p.foto) %>
+                  <% end %>
+                <% end %>
+              </div>
+              <br>
+              <h1><%= event.title %></h1>
+              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+              <br>
+              <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
+              <p><%= link_to 'Read more..', event %></p>
+              <% if logged_in? %>
+                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-
-    <div class='box-default event-part'>
-      <h1>Past Events</h1>
-      <br>
-      <% @events.each do |event| %>
-        <% if event.dilaksanakan < Date.today %>
-          <div class='box-default event-span'>
-            <h1><%= event.title %></h1>
-            <p><%= event.narasi %></p>
-            <p><%= event.dilaksanakan.strftime("%m/%d/%Y") %></p>
-            <p><%= link_to 'Show', event %></p>
-            <p><%= link_to 'Edit', edit_event_path(event) %></p>
-            <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-          </div>
-        <% end %>
-      <% end %>
+    <div class='col-lg-4 col-xs-12' id='event-calendar'>
+      <div class='box-default'>
+        <h1>Calendar</h1>
+        <hr>
+      </div>
     </div>
   </div>
-
-  <div class='box-default' id='event-calendar'>
-    <h1>Calendar</h1>
-    <hr>
-  </div>
+  <% if logged_in? %>
+    <%= link_to 'New Event', new_event_path %>
+  <% end %>
 </div>
-
-<%= link_to 'New Event', new_event_path %>
