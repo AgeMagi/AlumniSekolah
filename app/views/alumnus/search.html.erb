@@ -66,6 +66,10 @@
                     <% end %>
                 </div>
             </div>
+            <% if logged_in? %>
+                <hr>
+                <%= link_to 'Add Member', new_alumnu_path, :class => 'button-default' %>
+            <% end %>
         </div>
         <div class='col-lg-8 col-xs-12 box-default' id='alumni-list'>
             <% @alumnus.each do |alumnu| %>
@@ -91,7 +95,4 @@
             <% end %>
         </div>
     </div>
-
-    <%= link_to 'logout', logout_path, method: :delete%>
-    <%= link_to 'New Alumnu', new_alumnu_path %>
 </div>

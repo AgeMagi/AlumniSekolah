@@ -66,6 +66,10 @@
                     <% end %>
                 </div>
             </div>
+            <% if logged_in? %>
+                <hr>
+                <%= link_to 'Add Member', new_alumnu_path, :class => 'button-default' %>
+            <% end %>
         </div>
         <div class='col-lg-8 col-xs-12 box-default' id='alumni-list'>
             <% @alumnus.order(:nama).each do |alumnu| %>
@@ -85,8 +89,8 @@
                         <h2 style="display: inline;"><%= alumnu.kelas3 %></h2>
                         <div class='alumni-controller'>
                             <% if logged_in? %>
-                              <p><%= link_to 'Edit', edit_alumnu_path(alumnu) %></p>|
-                              <p><%= link_to 'Destroy', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                              <p><%= link_to 'Edit', edit_alumnu_path(alumnu) %></p>&nbsp;|&nbsp;
+                              <p><%= link_to 'Hapus', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></p>
                             <% end %>
                         </div>
                     </div>
@@ -94,6 +98,4 @@
             <% end %>
         </div>
     </div>
-
-    <%= link_to 'New Alumnu', new_alumnu_path %>
 </div>
