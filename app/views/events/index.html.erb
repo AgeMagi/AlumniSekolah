@@ -4,58 +4,70 @@
       <div class='box-default event-part'>
         <h1>Upcoming Events</h1>
         <br>
-        <% @events.each do |event| %>
-          <% if event.dilaksanakan >= Date.today %>
-            <div class='box-default event-span'>
-              <div class='event-span-photo'>
-                <% if !event.photos.any? %>
-                  <% image_tag('default_event.png', height: 200) %>
-                <% else %>
-                  <% event.photos.each do |p| %>
-                    <%= image_tag(p.foto) %>
+        <% if @events.any? %>
+          <% @events.each do |event| %>
+            <% if event.dilaksanakan >= Date.today %>
+              <div class='box-default event-span'>
+                <div class='event-span-photo'>
+                  <% if !event.photos.any? %>
+                    <% image_tag('default_event.png', height: 200) %>
+                  <% else %>
+                    <% event.photos.each do |p| %>
+                      <%= image_tag(p.foto) %>
+                    <% end %>
                   <% end %>
+                </div>
+                <br>
+                <h1><%= event.title %></h1>
+                <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+                <br>
+                <p><%= truncate event.narasi, length: 300 %></p>
+                <p><%= link_to 'Read more..', event %></p>
+                <% if logged_in? %>
+                  <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
                 <% end %>
               </div>
-              <br>
-              <h1><%= event.title %></h1>
-              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
-              <br>
-              <p><%= truncate event.narasi, length: 300 %></p>
-              <p><%= link_to 'Read more..', event %></p>
-              <% if logged_in? %>
-                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-              <% end %>
-            </div>
+            <% end %>
           <% end %>
+        <% else %>
+          <div style="text-align: center">
+            <p>Tidak ada event yang sedang berlangsung saat ini.</p>
+          </div>
         <% end %>
       </div>
 
       <div class='box-default event-part'>
         <h1>Past Events</h1>
         <br>
-        <% @events.each do |event| %>
-          <% if event.dilaksanakan < Date.today %>
-            <div class='box-default event-span'>
-              <div class='event-span-photo'>
-                <% if !event.photos.any? %>
-                  <% image_tag('default_event.png') %>
-                <% else %>
-                  <% event.photos.each do |p| %>
-                    <%= image_tag(p.foto) %>
+        <% if @events.any? %>
+          <% @events.each do |event| %>
+            <% if event.dilaksanakan < Date.today %>
+              <div class='box-default event-span'>
+                <div class='event-span-photo'>
+                  <% if !event.photos.any? %>
+                    <% image_tag('default_event.png') %>
+                  <% else %>
+                    <% event.photos.each do |p| %>
+                      <%= image_tag(p.foto) %>
+                    <% end %>
                   <% end %>
+                </div>
+                <br>
+                <h1><%= event.title %></h1>
+                <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
+                <br>
+                <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
+                <p><%= link_to 'Read more..', event %></p>
+                <% if logged_in? %>
+                  <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
                 <% end %>
               </div>
-              <br>
-              <h1><%= event.title %></h1>
-              <h3>Waktu Acara: <%= event.dilaksanakan.strftime("%m/%d/%Y") %></h3>
-              <br>
-              <p style="display: inline;"><%= truncate simple_format(event.narasi), length: 300 %></p>
-              <p><%= link_to 'Read more..', event %></p>
-              <% if logged_in? %>
-                <P><%= link_to 'Delete event', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-              <% end %>
-            </div>
+            <% end %>
           <% end %>
+        <% else %>
+          <div style="text-align: center">
+            <p>Tidak ada event.</p>
+          </div>
         <% end %>
       </div>
     </div>

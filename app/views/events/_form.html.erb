@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-<%= form_with(model: event, local: true, multipart: true) do |form| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class='container col-md-4 col-xs-8 event-main'>
-    <div class='event-list box-default'>
-      <h1>Edit Event</h1>
-
-      <div class='edit'>
-          <%= form.label :title %>
-          <%= form.text_field :title, id: :event_title %>
-      </div>
-
-      <%= form.fields_for :photos do |p| %>
-        <div class="edit">
-            <%= p.label :foto %>
-            <%= p.file_field :foto, :multiple => true, name: "photos[foto][]" %>
-        </div>
-      <% end %>
-
-      <div class="edit">
-          <%= form.label(:dilaksanakan, "Tanggal : ") %>
-          <%= form.date_field :dilaksanakan %>
-      </div>
-
-      <div class="edit">
-          <%= form.label :narasi %>
-          <%= form.text_area :narasi, id: :event_narasi %>
-      </div>
-
-      <div class="actions">
-        <%= form.submit %>
-      </div>
-
-      <%= link_to 'Show', @event %> |
-      <%= link_to 'Back', events_path %>
-    </div>
-
-  </div>
-
-<% end %>
-=======
 <%= form_with(model: event, local: true, multipart: true) do |form| %>
   <div class='container col-md-4 col-xs-8 event-main'>
 
@@ -92,4 +40,3 @@
   </div>
 
 <% end %>
->>>>>>> 941cdecec0fdc8790f32bc3532016a7d7eec6ea2
