@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180420011059) do
+ActiveRecord::Schema.define(version: 20180504012500) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "ketua1"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180420011059) do
     t.string "kelas3"
     t.string "email"
     t.string "nohp"
+    t.string "alamat_rumah"
   end
 
   create_table "events", force: :cascade do |t|
