@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504012500) do
+ActiveRecord::Schema.define(version: 20180522155942) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "ketua1"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180504012500) do
     t.string "fotopenasihat2"
     t.string "penasihat3"
     t.string "fotopenasihat3"
+    t.text "text_pengantar"
   end
 
   create_table "alumnus", force: :cascade do |t|

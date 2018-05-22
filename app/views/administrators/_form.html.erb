@@ -8,6 +8,7 @@
                 <div class="col-md-5 title">
                     <%= f.text_field(:pembina) %> <br>
                 </div>
+                <%= f.file_field(:fotopembina)%>
             </div>
 
             <div class="admin-nama">
@@ -19,6 +20,9 @@
                     <%= f.text_field(:penasihat2) %> <br>
                     <%= f.text_field(:penasihat3) %> <br>
                 </div>
+                <%= f.file_field(:fotopenasihat1)%>
+                <%= f.file_field(:fotopenasihat2)%>
+                <%= f.file_field(:fotopenasihat3)%>
             </div>
 
             <div class="admin-nama">
@@ -28,6 +32,7 @@
                 <div class="col-md-5 title">
                     <%= f.text_field(:ketua1) %> <br>
                 </div>
+                <%= f.file_field(:fotoketua1)%>
             </div>
 
             <div class="admin-nama">
@@ -37,6 +42,7 @@
                 <div class="col-md-5 title">
                     <%= f.text_field(:ketua2) %> <br>
                 </div>
+                <%= f.file_field(:fotoketua2) %>
             </div>
             
 
@@ -47,6 +53,7 @@
                 <div class="col-md-5 title">
                     <%= f.text_field(:bendahara1) %> <br>
                 </div>
+                <%= f.file_field(:fotobendahara1)%>
             </div>
 
             <div class="admin-nama">
@@ -56,6 +63,7 @@
                 <div class="col-md-5 title">
                     <%= f.text_field(:bendahara2) %> <br>
                 </div>
+                <%= f.file_field(:fotobendahara)%>
             </div>
 
             <%= f.submit("Submit Administrator") %>

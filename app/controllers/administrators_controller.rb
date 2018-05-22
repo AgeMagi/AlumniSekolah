@@ -35,6 +35,16 @@ class AdministratorsController < ApplicationController
     end
   end
 
+  def pengantar
+    @administrator = Administrator.last
+  end
+
+  def isi_pengantar
+    @administrator = Administrator.last
+    @administrator.text_pengantar = params[:text_pengantar]
+    @administrator.save
+  end
+
   private
     def administrator_params
       params.require(:administrator).permit(:ketua1, :fotoketua1, :ketua2, :fotoketua2, :bendahara1, :fotobendahara1, :bendahara2, :fotobendahara2, :pembina, :fotopembina, :penasihat1, :fotopenasihat1, :penasihat2, :fotopenasihat2, :penasihat3, :fotopenasihat3)

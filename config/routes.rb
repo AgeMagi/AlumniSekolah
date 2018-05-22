@@ -17,5 +17,8 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy'
   delete 'logout', to: 'sessions#destroy'
 
+  get 'pengantar', to: 'administrators#pengantar'
+  post 'pengantar', to: 'administrators#isi_pengantar'
+
   root 'events#index'
 end
