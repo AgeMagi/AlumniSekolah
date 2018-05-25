@@ -13,58 +13,78 @@
             <% @administrator = Administrator.last %>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Pembina</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.pembina %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopembina %>">
                 </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Penasehat</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.penasihat1 %> </p>
                     <p><%= @administrator.penasihat2 %> </p>
                     <p><%= @administrator.penasihat3 %> </p>
                 </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopenasihat1 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotopenasihat2 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotopenasihat3 %>">
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Ketua</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.ketua1 %> </p>
                 </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotoketua1 %>">
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Wakil Ketua</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.ketua2 %> </p>
                 </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotoketua2 %>">
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Bendahara 1</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.bendahara1 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotobendahara1 %>">
                 </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 title">
+                <div class="col-md-3 title">
                     <p>Bendahara 2</p>
                 </div>
-                <div class="col-md-7 name">
+                <div class="col-md-5 name">
                     <p><%= @administrator.bendahara2 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotobendahara2 %>">
                 </div>
             </div>
 
