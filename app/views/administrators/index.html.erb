@@ -1,8 +1,12 @@
 <div class='container admin-main'>
     <div class='box-default admin-content'>
         <% if @administrator.nil? %>
-            <% @administrator = Administrator.new %>
-            <%= render :partial => 'administrators/form' %>
+            <% if logged_in? %>
+                <% @administrator = Administrator.new %>
+                <%= render :partial => 'administrators/form' %>
+            <% else %>
+                <p> Tidak ada Administrator </p>
+            <% end %>
         <% else %>
             <h1>Struktur Organisasi</h1>
             <br>
