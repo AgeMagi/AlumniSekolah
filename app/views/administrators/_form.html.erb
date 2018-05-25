@@ -2,70 +2,83 @@
     <div class="container admin-main">
         <div class="box-default admin-content">
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:pembina, "Pembina") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:pembina) %> <br>
                 </div>
-                <%= f.file_field(:fotopembina)%>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotopembina)%>
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:penasihat1, "Penasehat") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:penasihat1) %> <br>
                     <%= f.text_field(:penasihat2) %> <br>
                     <%= f.text_field(:penasihat3) %> <br>
                 </div>
-                <%= f.file_field(:fotopenasihat1)%>
-                <%= f.file_field(:fotopenasihat2)%>
-                <%= f.file_field(:fotopenasihat3)%>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotopenasihat1)%>
+                    <%= f.file_field(:fotopenasihat2)%>
+                    <%= f.file_field(:fotopenasihat3)%>
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:ketua1, "Ketua") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:ketua1) %> <br>
                 </div>
-                <%= f.file_field(:fotoketua1)%>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotoketua1)%>
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:ketua2, "Wakil Ketua") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:ketua2) %> <br>
                 </div>
-                <%= f.file_field(:fotoketua2) %>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotoketua2) %>
+                </div>
             </div>
             
 
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:bendahara1, "Bendahara 1") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:bendahara1) %> <br>
                 </div>
-                <%= f.file_field(:fotobendahara1)%>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotobendahara1)%>
+                </div>
             </div>
 
             <div class="admin-nama">
-                <div class="col-md-5 name">
+                <div class="col-md-4 name">
                     <%= f.label(:bendahara2, "Bendahara 2") %>
                 </div>
-                <div class="col-md-5 title">
+                <div class="col-md-4 title">
                     <%= f.text_field(:bendahara2) %> <br>
                 </div>
-                <%= f.file_field(:fotobendahara)%>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotobendahara)%>
+                </div>
             </div>
 
+            <br>
             <%= f.submit("Submit Administrator") %>
         </div>
     </div>
