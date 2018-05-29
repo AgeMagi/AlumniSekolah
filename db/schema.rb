@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180522155942) do
+ActiveRecord::Schema.define(version: 20180529082516) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "ketua1"
@@ -30,6 +30,36 @@ ActiveRecord::Schema.define(version: 20180522155942) do
     t.string "penasihat3"
     t.string "fotopenasihat3"
     t.text "text_pengantar"
+    t.string "humas1"
+    t.string "fotohumas1"
+    t.string "humas2"
+    t.string "fotohumas2"
+    t.string "umum1"
+    t.string "fotoumum1"
+    t.string "umum2"
+    t.string "fotoumum2"
+    t.string "pk1"
+    t.string "fotopk1"
+    t.string "pk2"
+    t.string "fotopk2"
+    t.string "pk3"
+    t.string "fotopk3"
+    t.string "pk41"
+    t.string "fotopk41"
+    t.string "pk42"
+    t.string "fotopk42"
+    t.string "pk51"
+    t.string "fotopk51"
+    t.string "pk52"
+    t.string "fotopk52"
+    t.string "pk6"
+    t.string "fotopk6"
+    t.string "pk7"
+    t.string "fotopk7"
+    t.string "pk81"
+    t.string "fotopk81"
+    t.string "pk82"
+    t.string "fotopk82"
   end
 
   create_table "alumnus", force: :cascade do |t|

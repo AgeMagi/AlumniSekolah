@@ -47,6 +47,12 @@ class AdministratorsController < ApplicationController
 
   private
     def administrator_params
-      params.require(:administrator).permit(:ketua1, :fotoketua1, :ketua2, :fotoketua2, :bendahara1, :fotobendahara1, :bendahara2, :fotobendahara2, :pembina, :fotopembina, :penasihat1, :fotopenasihat1, :penasihat2, :fotopenasihat2, :penasihat3, :fotopenasihat3)
+      params.require(:administrator).permit(:ketua1, :fotoketua1, :ketua2, :fotoketua2, 
+         :bendahara1, :fotobendahara1, :bendahara2, :fotobendahara2, :pembina, :fotopembina, 
+         :penasihat1, :fotopenasihat1, :penasihat2, :fotopenasihat2, :penasihat3, :fotopenasihat3,
+         :humas1, :fotohumas1, :humas2, :fotohumas2, :umum1, :fotoumum1,
+         :umum2, :fotoumum2, :pk1, :fotopk1, :pk2, :fotopk2, :pk3, :fotopk3, 
+         :pk41, :fotopk41, :pk42, :fotopk42, :pk51, :fotopk51, :pk52, :fotopk52, :pk6, :fotopk6, :pk7, :fotopk7, 
+         :pk81, :fotopk81, :pk82, :fotopk82)
     end
 end

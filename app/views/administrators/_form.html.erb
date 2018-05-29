@@ -78,6 +78,140 @@
                 </div>
             </div>
 
+            <div class="admin-nama">
+                <div class="col-md-4 name">
+                    <%= f.label(:humas1, "SIE Humas") %>
+                </div>
+                <div class="col-md-4 title">
+                    <%= f.text_field(:humas1) %> <br>
+                    <%= f.text_field(:humas2) %> <br>
+                </div>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotohumas1)%>
+                    <%= f.file_field(:fotohumas2)%>
+                </div>
+            </div>    
+
+            <div class="admin-nama">
+                <div class="col-md-4 name">
+                    <%= f.label(:umum1, "SIE Umum") %>
+                </div>
+                <div class="col-md-4 title">
+                    <%= f.text_field(:umum1) %> <br>
+                    <%= f.text_field(:umum2) %> <br>
+                </div>
+                <div class="col-md-4">
+                    <%= f.file_field(:fotoumum1)%>
+                    <%= f.file_field(:fotoumum2)%>
+                </div>
+            </div>    
+
+            <div style="padding-left:30px; text-align:left;">
+                Perwakilan Korwil <br>
+                <div class="admin-nama">    
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk1, "Bali,NTB,NTT") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk1) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk1)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk2, "Banyuwangi") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk2) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk2)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk3, "Jember") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk3) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk3)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk41, "Jogja-Jateng") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk41) %> <br>
+                        <%= f.text_field(:pk42) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk41)%> 
+                        <%= f.file_field(:fotopk42)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk51, "Surabaya dan Sekitarnya") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk51) %> <br>
+                        <%= f.text_field(:pk52) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk51)%> 
+                        <%= f.file_field(:fotopk52)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk6, "Malang") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk6) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk6)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk7, "Jakarta,Jabar,Banten") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk7) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk7)%>
+                    </div>
+                </div>
+
+                <div class="admin-nama">  
+                    <div class="col-md-4 name">
+                        <%= f.label(:pk81, "Daerah-Daerah lain") %>
+                    </div>
+                    <div class="col-md-4 title">
+                        <%= f.text_field(:pk81) %> <br>
+                        <%= f.text_field(:pk82) %> <br>
+                    </div>
+                    <div class="col-md-4">
+                        <%= f.file_field(:fotopk81)%> 
+                        <%= f.file_field(:fotopk82)%>
+                    </div>
+                </div>
+            </div>  
+            </div>
+
             <br>
             <%= f.submit("Submit Administrator") %>
         </div>

@@ -7,6 +7,21 @@ class Administrator < ApplicationRecord
   validates :penasihat1, presence: true
   validates :penasihat2, presence: true
   validates :penasihat3, presence: true
+  validates :humas1, presence: true
+  validates :humas2, presence: true
+  validates :umum1, presence: true
+  validates :umum2, presence: true
+  validates :pk1, presence: true
+  validates :pk2, presence: true
+  validates :pk3, presence: true
+  validates :pk41, presence: true
+  validates :pk42, presence: true
+  validates :pk51, presence: true
+  validates :pk52, presence: true
+  validates :pk6, presence: true
+  validates :pk7, presence: true
+  validates :pk81, presence: true
+  validates :pk82, presence: true
 
   mount_uploader :fotoketua1, ImageUploader
   mount_uploader :fotoketua2, ImageUploader
@@ -16,20 +31,20 @@ class Administrator < ApplicationRecord
   mount_uploader :fotopenasihat1,ImageUploader
   mount_uploader :fotopenasihat2,ImageUploader
   mount_uploader :fotopenasihat3,ImageUploader
+  mount_uploader :fotohumas1,ImageUploader
+  mount_uploader :fotohumas2,ImageUploader
+  mount_uploader :fotoumum1,ImageUploader
+  mount_uploader :fotoumum2,ImageUploader
+  mount_uploader :fotopk1,ImageUploader
+  mount_uploader :fotopk2,ImageUploader
+  mount_uploader :fotopk3,ImageUploader
+  mount_uploader :fotopk41,ImageUploader
+  mount_uploader :fotopk42,ImageUploader
+  mount_uploader :fotopk51,ImageUploader
+  mount_uploader :fotopk52,ImageUploader
+  mount_uploader :fotopk6,ImageUploader
+  mount_uploader :fotopk7,ImageUploader
+  mount_uploader :fotopk81,ImageUploader
+  mount_uploader :fotopk82,ImageUploader
 
-  validates_processing_of :fotoketua1, :fotoketua2, :fotobendahara1, :fotobendahara2, :fotopembina, :fotopenasihat1, :fotopenasihat2, :fotopenasihat3
-
-  validate :foto_size_validation
-
-  private
-    def foto_size_validation
-      errors[:fotoketua1] << "should be less than 500KB" if fotoketua1.size > 0.5.megabytes
-      errors[:fotoketua2] << "should be less than 500KB" if fotoketua2.size > 0.5.megabytes
-      errors[:fotobendahara1] << "should be less than 500KB" if fotobendahara1.size > 0.5.megabytes
-      errors[:fotobendahara2] << "should be less than 500KB" if fotobendahara2.size > 0.5.megabytes
-      errors[:fotopembina] << "should be less than 500KB" if fotopembina.size > 0.5.megabytes
-      errors[:fotopenasihat1] << "should be less than 500KB" if fotopenasihat1.size > 0.5.megabytes
-      errors[:fotopenasihat2] << "should be less than 500KB" if fotopenasihat2.size > 0.5.megabytes
-      errors[:fotopenasihat3] << "should be less than 500KB" if fotopenasihat3.size > 0.5.megabytes
-    end
 end
