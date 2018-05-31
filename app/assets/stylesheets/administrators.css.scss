@@ -13,6 +13,16 @@ h1 {
 	padding: 20px;
 }
 
+.admin-pengantar > textarea {
+	width: 80%;
+	height: 200px;
+	box-sizing : border-box;
+}
+
+.admin-pengantar p {
+	font-size: 1.3em;
+}
+
 .admin-nama {
 	display: flex;
 	justify-content: center;

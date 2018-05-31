@@ -88,6 +88,139 @@
                 </div>
             </div>
 
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>SIE Humas</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.humas1 %> </p>
+                    <p><%= @administrator.humas2 %> </p>
+                </div>
+                <div class="col-md-4" style="display: block">
+                    <img class="admin-photo" src="<%= @administrator.fotohumas1 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotohumas2 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>SIE Umum</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.umum1 %> </p>
+                    <p><%= @administrator.umum2 %> </p>
+                </div>
+                <div class="col-md-4" style="display: block">
+                    <img class="admin-photo" src="<%= @administrator.fotoumum1 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotoumum2 %>">
+                </div>
+            </div>
+
+            <br>
+            <h1 style="text-align: left; font-size: 1.5em; padding-left: 30px">Perwakilan Korwil</h1>
+            <br>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Bali, NTB, NTT</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk1 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk1 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Banyuwangi</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk2 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk2 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Jember</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk3 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk3 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Jogja-Jateng</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk41 %> </p>
+                    <p><%= @administrator.pk42 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk41 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Surabaya dan Sekitarnya</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk51 %> </p>
+                    <p><%= @administrator.pk52 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk51 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotopk52 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Malang</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk6 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk6 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Jakarta, Jabar, Banten</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk7 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk7 %>">
+                </div>
+            </div>
+
+            <div class="admin-nama">
+                <div class="col-md-3 title">
+                    <p>Daerah-Daerah Lain</p>
+                </div>
+                <div class="col-md-5 name">
+                    <p><%= @administrator.pk81 %> </p>
+                    <p><%= @administrator.pk82 %> </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="admin-photo" src="<%= @administrator.fotopk81 %>">
+                    <img class="admin-photo" src="<%= @administrator.fotopk82 %>">
+                </div>
+            </div>
+
             <% if logged_in? %>
                 <%= link_to 'Edit Administrator', edit_administrator_path(@administrator), :class => 'button-default' %>
             <% end %>
