@@ -40,7 +40,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.3'
 gem 'simple_calendar', '~> 2.0'
 
-gem 'rack-timeout'
+gem 'rack-timeout', require:'rack/timeout/base'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
