@@ -12,6 +12,10 @@
             <br>
             <% @administrator = Administrator.last %>
 
+            <div class="admin-pengantar">
+                <p><%= @administrator.text_pengantar %></p>
+            </div>
+
             <div class="admin-nama">
                 <div class="col-md-3 title">
                     <p>Pembina</p>
