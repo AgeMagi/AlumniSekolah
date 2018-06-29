@@ -13,7 +13,11 @@
             <% @administrator = Administrator.last %>
 
             <div class="admin-pengantar">
-                <p><%= @administrator.text_pengantar %></p>
+                <div id="admin-pengantar__post">
+                  <hr><br>
+                  <%= raw(@administrator.text_pengantar) %>
+                  <br><hr><br>
+                </div>
             </div>
 
             <div class="admin-nama">
