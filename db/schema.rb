@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180630070201) do
+ActiveRecord::Schema.define(version: 20180630071311) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "ketua1"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 20180630070201) do
     t.string "fotopk81"
     t.string "pk82"
     t.string "fotopk82"
+    t.string "sekretaris"
+    t.string "fotosekretaris"
   end
 
   create_table "alumnus", force: :cascade do |t|
