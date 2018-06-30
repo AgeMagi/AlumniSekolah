@@ -1,0 +1,63 @@
+/* line 1, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #005f9e;
+}
+
+/* line 7, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-main {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 12, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-content {
+  padding: 20px;
+}
+
+/* line 16, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-pengantar > textarea {
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+/* line 22, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-pengantar p {
+  font-size: 1em;
+}
+
+/* line 26, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+#admin-pengantar__post {
+  padding: 0 12%;
+}
+
+/* line 30, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-nama {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 38, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-nama p {
+  font-size: 1.3em;
+}
+
+/* line 42, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-nama .name, .title {
+  text-align: left;
+}
+
+/* line 46, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-nama .title p {
+  font-weight: 600;
+}
+
+/* line 50, /media/mhabibih/08966A79966A66E2/Proyek/Alumni Sekolah/app/assets/stylesheets/administrators.css.scss */
+.admin-photo {
+  width: 100%;
+}
