@@ -22,6 +22,7 @@ class Administrator < ApplicationRecord
   validates :pk7, presence: true
   validates :pk81, presence: true
   validates :pk82, presence: true
+  validates :sekretaris, presence: true
 
   mount_uploader :fotoketua1, ImageUploader
   mount_uploader :fotoketua2, ImageUploader
@@ -46,5 +47,6 @@ class Administrator < ApplicationRecord
   mount_uploader :fotopk7,ImageUploader
   mount_uploader :fotopk81,ImageUploader
   mount_uploader :fotopk82,ImageUploader
+  mount_uploader :fotosekretaris, ImageUploader
 
 end

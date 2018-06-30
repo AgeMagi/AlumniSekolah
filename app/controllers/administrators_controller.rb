@@ -43,6 +43,6 @@ class AdministratorsController < ApplicationController
          :humas1, :fotohumas1, :humas2, :fotohumas2, :umum1, :fotoumum1,
          :umum2, :fotoumum2, :pk1, :fotopk1, :pk2, :fotopk2, :pk3, :fotopk3, 
          :pk41, :fotopk41, :pk42, :fotopk42, :pk51, :fotopk51, :pk52, :fotopk52, :pk6, :fotopk6, :pk7, :fotopk7, 
-         :pk81, :fotopk81, :pk82, :fotopk82, :text_pengantar)
+         :pk81, :fotopk81, :pk82, :fotopk82, :text_pengantar, :sekretaris, :fotosekretaris)
     end
 end
