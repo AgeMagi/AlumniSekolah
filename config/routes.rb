@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :events do
     resources :participants
   end
+  
   resources :alumnus
   resources :photos
   resources :users, except: :new

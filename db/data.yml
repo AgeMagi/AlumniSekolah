@@ -1,0 +1,188 @@
+
+---
+administrators:
+  columns:
+  - id
+  - ketua1
+  - fotoketua1
+  - ketua2
+  - fotoketua2
+  - bendahara1
+  - fotobendahara1
+  - bendahara2
+  - fotobendahara2
+  - pembina
+  - fotopembina
+  - penasihat1
+  - fotopenasihat1
+  - penasihat2
+  - fotopenasihat2
+  - penasihat3
+  - fotopenasihat3
+  - text_pengantar
+  - humas1
+  - fotohumas1
+  - humas2
+  - fotohumas2
+  - umum1
+  - fotoumum1
+  - umum2
+  - fotoumum2
+  - pk1
+  - fotopk1
+  - pk2
+  - fotopk2
+  - pk3
+  - fotopk3
+  - pk41
+  - fotopk41
+  - pk42
+  - fotopk42
+  - pk51
+  - fotopk51
+  - pk52
+  - fotopk52
+  - pk6
+  - fotopk6
+  - pk7
+  - fotopk7
+  - pk81
+  - fotopk81
+  - pk82
+  - fotopk82
+  - sekretaris
+  - fotosekretaris
+  records: 
+  - - 1
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - sdf
+    - 
+    - asdf
+    - 
+    - x
+    - 
+    - x
+    - 
+    - "<p dir=\"ltr\"><strong>Assalamualaikum wr wb..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Om swastiastu om..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Dan Salam Sejahtera kita semua..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Dengan
+      mengucap Puji Syukur kepada Allah SWT, kita bersyukur dan berterima kasih Sampai
+      hari ini kita masih diberi kesehatan dan masih diberi kesempatan utk tetap menjalin
+      tali silaturahmi sesama Alumni &#39;85 SMPN Kalibaru. </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Dulur&quot;
+      alumni yg kami cintai..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Agar
+      tetap terjalin persaudaraan kita ini dan selalu terjalin tali silaturahmi, &nbsp;kami
+      sudah membentuk anggota kepengurusan *ALUMNI &#39;85*.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Tujuan utama Kepengurusan adalah mengupayakan kelanggengan
+      tali silahturahmi di antara anggota-anggota dan keluarga Alumni 85. &nbsp;Kami
+      yakin bahwa semua Alumni 85 mempunyai keinginan yang sangat kuat untuk mempertahankan
+      dan meningkatkan rasa kebersamaan dan kekeluargaan Alumni 85 selalu. &nbsp;Kami
+      yakin hal ini akan tercapai karena walaupun kita mungkin berbeda-beda latar
+      belakang, kita semua memiliki satu perekat yang tak akan luntur yaitu sekolah
+      kita tercinta SMPN Kalibaru (sekarang SMPN 1 Kalibaru).</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Hal
+      tersebut di atas merupakan tugas utama Para Pengurus Alumni 85 SMPN 1 Kalibaru
+      kita.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Lebih jauh, Para Pengurus bercita-cita agar alumni lebih
+      bisa terorganisir dalam satu wadah dan kami akan lebih mudah utk menyampaikan
+      suatu rencana kegiatan sosial maupun suatu rencana kerja dalam bidang usaha
+      yang melibatkan Alumni jika memang suatu saat nanti memungkinkan. </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Dulur&quot;
+      Alumni yg kami sayangi.....</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Kita
+      semua gak akan berhasil dalam menempuh suatu rencana.... Jika kita semua tidak
+      bisa kompak serta rukun dan guyub. &nbsp;Para Pengurus tidak akan berarti apa-apa
+      tanpa keterlibatan seluruh Alumni 85.</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Oleh
+      karena itu..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Kami
+      mohon, marilah kita menjaga kebersamaan ini agar semakin kuat dan semakin erat
+      dalam bentuk rasa saling menghargai, menghormati dalam menjaga tali persaudaraan
+      kita..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Dulur&quot; Alumni &#39;85 yg kami hormati.....untuk mewujudkan
+      hal tsb.alhamdulilah kita sudah punya website untuk Alumni 85</strong></p>\r\n\r\n<p><br
+      />\r\n&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Suatu kebanggaan bagi kita pengurus
+      untuk dapat berkomunikasi dengan dulur&quot; Alumni 85 lewat Website ini</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Mohon dulur&quot; semua..... memberi masukan atau koreksi
+      nantinya terhadap kegiatan kita</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>Agar anggota pengurus bisa bekerja dg baik dan tenang dalam
+      menjalankan amanah *Alumni&#39;85* nanti..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Akhir
+      kata..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Moto
+      Alumni &#39;85 akan selalu kami ucapkan..... </strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\"><strong>*DARI &nbsp;ALUMNI OLEH &nbsp;ALUMNI, DAN UNTUK ALUMNI.....*</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>*ALUMNI
+      &#39;85 TIDAK KEMANA MANA tapi ADA DIMANA MANA.....*</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p
+      dir=\"ltr\">&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Wassalamualaikum
+      wr wb.</strong></p>\r\n"
+    - xx
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+    - x
+    - 
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-06-30 07:14:42.326273'
+    - '2018-06-30 07:14:42.326273'
+
+---
+users:
+  columns:
+  - id
+  - username
+  - password_digest
+  - chance
+  - active
+  records: 
+  - - 1
+    - admin
+    - "$2a$10$NfCbfKYomF8Rm2ZT48xRIeXacEfuGZR.PK3IGIqjlkCtuoDo6oGqa"
+    - 3
+    - 'yes'
+  - - 2
+    - admin
+    - "$2a$10$6rEj.eP1pA4OeDRr7mhNcO2YACQk8cENfNj6OWiOpL1S0O7tJDR36"
+    - 3
+    - 'yes'
