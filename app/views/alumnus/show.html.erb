@@ -13,7 +13,8 @@
         <h2 style="display: inline;"><%= @alumnu.kelas1 %></h2>
         <h2 style="display: inline;"><%= @alumnu.kelas2 %></h2>
         <h2 style="display: inline;"><%= @alumnu.kelas3 %></h2>
-        <h2>Alamat:<%= @alumnu.alamat_rumah %></h2>
+        <h2>Alamat: <%= @alumnu.alamat_rumah %></h2>
+        <h2>No. HP: <%= @alumnu.nohp %></h2>
         <div class='alumni-controller'>
             <% if logged_in? %>
               <p><%= link_to 'Edit', edit_alumnu_path(@alumnu) %></p>&nbsp;|&nbsp;
