@@ -9,7 +9,8 @@ class AdministratorsController < ApplicationController
       flash[:success] = "Your Administrators successfully create"
       redirect_to administrators_path
     else
-      render 'new'
+      format.html { render :new }
+      format.json { render json: @administrator.errors, status: :unprocessable_entity }
     end
   end
 
