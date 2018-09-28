@@ -1,29 +1,4 @@
 class Administrator < ApplicationRecord
-  validates :ketua1, presence: true
-  validates :ketua2, presence: true
-  validates :bendahara1, presence: true
-  validates :bendahara2, presence: true
-  validates :pembina, presence: true
-  validates :penasihat1, presence: true
-  validates :penasihat2, presence: true
-  validates :penasihat3, presence: true
-  validates :humas1, presence: true
-  validates :humas2, presence: true
-  validates :umum1, presence: true
-  validates :umum2, presence: true
-  validates :pk1, presence: true
-  validates :pk2, presence: true
-  validates :pk3, presence: true
-  validates :pk41, presence: true
-  validates :pk42, presence: true
-  validates :pk51, presence: true
-  validates :pk52, presence: true
-  validates :pk6, presence: true
-  validates :pk7, presence: true
-  validates :pk81, presence: true
-  validates :pk82, presence: true
-  validates :sekretaris, presence: true
-
   mount_uploader :fotoketua1, ImageUploader
   mount_uploader :fotoketua2, ImageUploader
   mount_uploader :fotobendahara1, ImageUploader
