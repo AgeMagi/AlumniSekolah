@@ -87,7 +87,7 @@
                             <p><%= link_to 'Show', alumnu %></p>
                             <% if logged_in? %>
                             <p><%= link_to 'Edit', edit_alumnu_path(alumnu) %></p>
-                            <p><%= link_to 'Destroy', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                            <p><%= link_to 'Delete', alumnu, method: :delete, data: { confirm: 'Are you sure?' } %></p>
                             <% end %>
                         </div>
                     </div>

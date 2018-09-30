@@ -21,7 +21,7 @@
               <p><%= truncate event.narasi, length: 300 %></p>
               <p><%= link_to 'Read more..', event %></p>
               <% if logged_in? %>
-                <P><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                <P><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               <% end %>
             </div>
           <% end %>
