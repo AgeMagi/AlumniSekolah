@@ -34,8 +34,17 @@
         </div>
       </div>
 
-      <div class="actions">
-        <%= form.submit %>
+      <div class="participant-input">
+        <div class="col">
+          <p>No. HP</p>
+        </div>
+        <div class="col">
+          <%= form.text_field :nohp, id: :participant_nohp %>
+        </div>
+      </div>
+
+      <div align="center">
+        <%= form.submit("Create Participant", class: "button-default") %>
       </div>
     <% end %>
   </div>

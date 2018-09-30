@@ -30,7 +30,7 @@ class AlumnusController < ApplicationController
         if (!params[:alumnu][:foto].nil?)
           @alumnu.create_photo!(:foto => params[:alumnu][:foto])
         end
-        format.html { redirect_to @alumnu, notice: 'Alumnu was successfully created.' }
+        format.html { redirect_to @alumnu}
         format.json { render :show, status: :created, location: @alumnu }
       else
         format.html { render :new }
@@ -53,7 +53,7 @@ class AlumnusController < ApplicationController
             @alumnu.create_photo!(:foto => params[:alumnu][:foto])
           end
         end
-        format.html { redirect_to @alumnu, notice: 'Alumnu was successfully updated.' }
+        format.html { redirect_to @alumnu}
         format.json { render :show, status: :ok, location: @alumnu }
       else
         format.html { render :edit }
@@ -67,7 +67,7 @@ class AlumnusController < ApplicationController
   def destroy
     @alumnu.destroy
     respond_to do |format|
-      format.html { redirect_to alumnus_url, notice: 'Alumnu was successfully destroyed.' }
+      format.html { redirect_to alumnus_url }
       format.json { head :no_content }
     end
   end

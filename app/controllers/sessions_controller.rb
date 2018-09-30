@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       user.save
       redirect_to home_path
     elsif user && user.active == "yes"
-      user.chance -= 1
+      # user.chance -= 1
       if user.chance == 0
         user.active = "no"
       end
