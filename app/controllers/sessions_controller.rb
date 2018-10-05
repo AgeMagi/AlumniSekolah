@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You have successfully logged in"
       user.chance = 3
       user.save
-      redirect_to home_path
+      redirect_to events_path
     elsif user && user.active == "yes"
       # user.chance -= 1
       if user.chance == 0

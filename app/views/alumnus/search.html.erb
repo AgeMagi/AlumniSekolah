@@ -74,9 +74,11 @@
         <div class='col-lg-8 col-xs-12 box-default' id='alumni-list'>
             <% @alumnus.each do |alumnu| %>
                 <div class='alumni-span'>
-                    <div class='alumni-photo'>
+                    <% if (alumnu.photo.nil?) %>
+                        <%= image_tag('default.png', width: 125, height: 125) %>
+                    <% else %>
                         <%= image_tag(alumnu.photo.foto.thumb.url) %>
-                    </div>
+                    <% end %>
                     <div class='alumni-data'>
                         <h1><%= alumnu.nama %></h1>
                         <h2 style="display: inline; font-weight: 400">Kelas:&nbsp;</h2>
