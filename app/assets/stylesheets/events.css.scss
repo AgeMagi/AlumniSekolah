@@ -115,7 +115,7 @@ h1 {
 }
 
 #cke_event_narasi {
-    width: 600px;
+    width: 100% !important;
 }
 
 @media screen and (max-width: 998px) {
@@ -133,21 +133,12 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 200px;
-        font-weight: bold;
-        color: #000000;
+    .event-span, #event-next {
+        padding: 15px;
     }
-    
-    .event-span h1 {
-        font-size: 200px;
-        font-weight: bold;
-        color: #ff0000;
-    }
-    
+
     .event-span h3 {
-        font-size: 200px;
-        color: #ffffff;
+        font-size: 1.2em;
     }
 
     .container {
@@ -170,10 +161,10 @@ h1 {
     }
 
     .event-part h1 {
-        font-size: 4em;
+        font-size: 2em;
     }
     
     .event-span h1 {
-        font-size: 3.4em;
+        font-size: 2em;
     }
 }

@@ -4,13 +4,13 @@
             <h2>Filter</h2>
             <hr>
             <div class='row'>
-                <div class='col-sm'>
+                <div class='col-sm-6 col-xs-4'>
                     <p>Kelas 1</p>
                     <p>Kelas 2</p>
                     <p>Kelas 3</p>
                 </div>
 
-                <div class='col-sm'>
+                <div class='col-sm-6 col-xs-4'>
                     <%= form_tag search_alumnus_path, :class => 'alumni_option', method: :get do %>
                         <%= select_tag(:kelas1, options_for_select(
                             [
@@ -95,6 +95,7 @@
                         </div>
                     </div>
                 </div>
+                <hr>
             <% end %>
         </div>
     </div>

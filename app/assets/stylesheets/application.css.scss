@@ -116,4 +116,21 @@ body {
     .jumbotron .row {
         display: block;
     }
+
+    #logo-jumbo {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    #logo-jumbo img {
+        width: 60%;
+    }
+
+    #search-jumbo {
+        text-align: center;
+    }
+
+    .box-default {
+        padding: 20px 5px 20px 5px;
+    }
 }

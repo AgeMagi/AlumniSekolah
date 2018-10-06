@@ -50,3 +50,9 @@ h1 {
 .admin-photo {
 	width: 100%;
 }
+
+@media screen and (max-width: 767px) {
+    #admin-pengantar__post {
+        padding: 2%;
+    }
+}
